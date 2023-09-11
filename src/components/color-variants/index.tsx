@@ -27,17 +27,24 @@ export default function ColorVariants() {
       <div className={styles.colorBallContainer}>
         {colors.map((color, index) => (
           // eslint-disable-next-line @next/next/no-img-element
-          <img
-            width={"100px"}
-            height={"100px"}
-            alt='colorBall'
-            key={`color-ball-${index}`}
-            className={styles.colorBall}
-            src={`/assets/color-balls/${color}.png`}
-            onClick={() => {
-              setSelectedColorImage(color);
-            }}
-          />
+          <div
+            className={
+              selectedColorImage == color ? styles.colorBallSelected : ""
+            }
+          >
+            <img
+              width={"100px"}
+              id='ballImage'
+              height={"100px"}
+              alt='colorBall'
+              className={styles.colorBall}
+              key={`color-ball-${index}`}
+              src={`/assets/color-balls/${color}.png`}
+              onClick={() => {
+                setSelectedColorImage(color);
+              }}
+            />
+          </div>
         ))}
       </div>
     </div>
