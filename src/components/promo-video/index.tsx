@@ -1,7 +1,53 @@
+import { Typography } from "@mui/material";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+
 export default function PromoVideo() {
+  const [showBanner, setShowBanner] = useState(false);
+  const router = useRouter();
+  function handleVideoEnd() {
+   setShowBanner(true)
+  }
+  useEffect(() => {
+    window?.document
+      ?.getElementById("myVideo")
+      ?.addEventListener("ended", handleVideoEnd, false);
+  }, [router.isReady]);
   return (
     <div>
-      <div>
+      <div style={{ position: "relative" }}>
+        {showBanner && (
+          <div
+            style={{
+              position: "absolute",
+              left: "0",
+              width: "100vw",
+              height: "100vh",
+            }}>
+            <Typography
+              variant='h2'
+              sx={{
+                marginInlineStart: "50px",
+                marginTop: "70px",
+                position: "absolute",
+                width: '500px',
+                textTransform: 'uppercase',
+                fontWeight: '500',
+                fontSize:'53px'
+              }}>
+              {" "}
+              The All-New SELTOS
+            </Typography>
+            <img
+              id='bannerImage'
+              src='/assets/Kia-Temp.png'
+              style={{
+                width: "100vw",
+                height: "100vh",
+              }}
+            />
+          </div>
+        )}
         <video
           style={{ width: "100vw", height: "100vh", objectFit: "cover" }}
           id='myVideo'
@@ -9,7 +55,7 @@ export default function PromoVideo() {
           height='100vh'
           autoPlay
           muted>
-          <source src={"/assets/promoVideo.webm"} type='video/webm' />
+          <source src={"/assets/SportageIntro-Film.webm"} type='video/webm' />
         </video>
       </div>
     </div>
