@@ -9,15 +9,7 @@ import ColorVariants from "../src/components/color-variants";
 import { Box } from "@mui/material";
 
 export default function Home() {
-  const router = useRouter();
-  function handleVideoEnd() {
-    console.log("ENDED");
-  }
-  useEffect(() => {
-    window?.document
-      ?.getElementById("myVideo")
-      ?.addEventListener("ended", handleVideoEnd, false);
-  }, [router.isReady]);
+
   return (
     <>
       <Layout>
