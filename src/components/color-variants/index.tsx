@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./styles/styles.module.css";
 
 export default function ColorVariants() {
   const [selectedColorImage, setSelectedColorImage] = useState("Black");
+  const [images, setImages] = useState<HTMLImageElement[]>([]);
   const colors = [
     "Blue",
     "White",
@@ -15,9 +15,17 @@ export default function ColorVariants() {
     "Black",
     "Red",
   ];
+  useEffect(() => {
+    colors.map((item) => {
+      let image = new Image()
+      image.src = `/assets/car-colors/${item}.png`;
+      images.push(image)
+    })
+  },[])
   return (
     <div id='mainColor' className={styles.colorsMainContainer}>
       <img
+        
         alt='color'
         className={styles.mainImage}
         width={100}
