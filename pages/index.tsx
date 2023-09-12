@@ -3,6 +3,7 @@ import PromoVideo from "../src/components/promo-video";
 import ColorVariants from "../src/components/color-variants";
 import { Box } from "@mui/material";
 import BeautyShoot from "../src/components/beauty-shoot";
+import LightsSection from "../src/components/lights-section/slider";
 
 export default function Home() {
 
@@ -13,6 +14,7 @@ export default function Home() {
           <PromoVideo key={"promoVideo"} />
           <BeautyShoot/>
           <ColorVariants />
+          <LightsSection/>
         </Box>
       </Layout>
     </>
