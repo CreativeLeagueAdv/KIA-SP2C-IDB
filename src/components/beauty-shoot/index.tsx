@@ -8,7 +8,7 @@ import FloatingTextSection from "../shared/floating-text";
 export default function BeautyShoot() {
   return (
     <div
-      id='mainColor'
+      id='shoot'
       className={styles.colorsMainContainer}
       style={{ position: "relative" }}>
       <img

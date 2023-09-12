@@ -14,7 +14,7 @@ export default function PromoVideo() {
       ?.addEventListener("ended", handleVideoEnd, false);
   }, [router.isReady]);
   return (
-    <div>
+    <div id='promo'>
       <div style={{ position: "relative" }}>
         {showBanner && (
           <div
@@ -30,10 +30,10 @@ export default function PromoVideo() {
                 marginInlineStart: "50px",
                 marginTop: "70px",
                 position: "absolute",
-                width: '500px',
-                textTransform: 'uppercase',
-                fontWeight: '500',
-                fontSize:'53px'
+                width: "500px",
+                textTransform: "uppercase",
+                fontWeight: "500",
+                fontSize: "53px",
               }}>
               {" "}
               The All-New SELTOS

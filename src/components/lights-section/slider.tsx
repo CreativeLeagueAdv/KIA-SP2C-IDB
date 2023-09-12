@@ -14,7 +14,7 @@ function SamplePrevArrow(props: any) {
         width: "50px",
         height: "50px",
         insetInlineEnd: "95% !important",
-        zIndex:'1000'
+        zIndex: "1000",
       }}
       onClick={onClick}
       className={className}
@@ -31,7 +31,6 @@ function SampleNextArrow(props: any) {
         width: "50px",
         height: "50px",
         insetInlineStart: "95% !important",
-       
       }}
       onClick={onClick}
       className={className}
@@ -65,7 +64,7 @@ export default function MainSlider() {
       content:''
       }
       `}</style>
-      <div style={{ height: "95vh", width: "100vw" }}>
+      <div id='lights' style={{ height: "95vh", width: "100vw" }}>
         <Slider {...settings}>
           <LightsSection type='Head' initial={"Off"} />
           <LightsSection type='Tail' initial={"Off"} />

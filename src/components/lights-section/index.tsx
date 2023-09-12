@@ -10,17 +10,15 @@ export default function LightsSection({
   initial,
 }: {
   type: "Tail" | "Head";
-  initial: "Off"|'On';
+  initial: "Off" | "On";
 }) {
-  const [state, setState] = useState<"Off" | "On">('Off');
+  const [state, setState] = useState<"Off" | "On">("Off");
   const images = [
     "/assets/TaillightOn.webp",
     "/assets/TaillightOff.webp",
     "/assets/HeadlightOff.webp",
     "/assets/HeadlightOn.webp",
   ];
-
-
 
   return (
     <>
@@ -32,9 +30,9 @@ export default function LightsSection({
           alt='color'
           className={styles.mainImage}
           width={100}
-                  height={100}
-                  style={{transition: 'width 2s'}}
-          src={`/assets/${type}light${state??'Off'}.webp`}
+          height={100}
+          style={{ transition: "width 2s" }}
+          src={`/assets/${type}light${state ?? "Off"}.webp`}
         />
         <div
           style={{
@@ -63,6 +61,7 @@ export default function LightsSection({
           <div
             style={{
               border: "1px solid #fff",
+              backgroundColor: "rgba(0,0,0,0.55)",
               padding: "16px",
               display: "flex",
               gap: "10px",
@@ -73,7 +72,7 @@ export default function LightsSection({
               onClick={() => {
                 setState("On");
               }}>
-             OFF
+              OFF
             </Button>
             <FormControlLabel
               control={
