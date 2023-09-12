@@ -10,7 +10,7 @@ export default function ColorVariants() {
 
   return (
     <>
-      <div id='mainColor' className={styles.colorsMainContainer}>
+      <div id='colors' className={styles.colorsMainContainer}>
         <img
           alt='color'
           className={styles.mainImage}

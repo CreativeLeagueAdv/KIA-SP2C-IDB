@@ -25,7 +25,7 @@ export const SwitchButton = styled(Switch)(({ theme }) => ({
     },
   },
   "& .MuiSwitch-thumb": {
-    backgroundColor: theme.palette.mode === "dark" ? "red" : "#000",
+    backgroundColor: theme.palette.mode === "dark" ? "red" : "rgba(0,0,025)",
     width: 32,
     height: 32,
     "&:before": {
@@ -44,7 +44,7 @@ export const SwitchButton = styled(Switch)(({ theme }) => ({
   },
   "& .MuiSwitch-track": {
     opacity: 1,
-    backgroundColor: theme.palette.mode === "dark" ? "#8796A5" : "#aab4be",
+    backgroundColor: theme.palette.mode === "dark" ? "#8796A5" : "#8796A5",
     borderRadius: 20 / 2,
   },
 }));
