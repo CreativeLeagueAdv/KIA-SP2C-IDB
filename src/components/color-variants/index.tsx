@@ -9,28 +9,24 @@ export default function ColorVariants() {
     "Blue",
     "White",
     "Green",
-    "Orange",
     "Silver",
-    "Bronze",
     "Black",
-    "Red",
   ];
   useEffect(() => {
     colors.map((item) => {
       let image = new Image()
-      image.src = `/assets/car-colors/${item}.png`;
+      image.src = `/assets/car-colors/${item}-min.png`;
       images.push(image)
     })
   },[])
   return (
     <div id='mainColor' className={styles.colorsMainContainer}>
       <img
-        
         alt='color'
         className={styles.mainImage}
         width={100}
         height={100}
-        src={`/assets/car-colors/${selectedColorImage}.png`}
+        src={`/assets/car-colors/${selectedColorImage}-min.png`}
       />
       <div className={styles.colorBallContainer}>
         {colors.map((color, index) => (
