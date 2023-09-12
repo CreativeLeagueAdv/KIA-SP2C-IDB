@@ -9,12 +9,12 @@ function SamplePrevArrow(props: any) {
   return (
     <ArrowBackIosNewIcon
       style={{
+        ...style,
         color: "white",
         width: "50px",
         height: "50px",
         insetInlineEnd: "95% !important",
-        zIndex: "1000",
-       
+        zIndex:'1000'
       }}
       onClick={onClick}
       className={className}
@@ -41,8 +41,8 @@ function SampleNextArrow(props: any) {
 export default function MainSlider() {
   const settings = {
     dots: false,
-    infinite: true,
-    speed: 500,
+    infinite: false,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
@@ -54,10 +54,21 @@ export default function MainSlider() {
 
   return (
     <>
+      <style>{`
+      .slick-next{
+        right:0px !important
+      }
+      .slick-prev{
+        left:0px !important
+      }
+       .slick-prev::before{
+      content:''
+      }
+      `}</style>
       <div style={{ height: "95vh", width: "100vw" }}>
         <Slider {...settings}>
-          <LightsSection type='Head' />
-          <LightsSection type='Tail' />
+          <LightsSection type='Head' initial={"Off"} />
+          <LightsSection type='Tail' initial={"Off"} />
         </Slider>
       </div>
     </>
