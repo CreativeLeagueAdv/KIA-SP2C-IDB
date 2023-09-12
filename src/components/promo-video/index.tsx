@@ -22,7 +22,7 @@ export default function PromoVideo() {
               position: "absolute",
               left: "0",
               width: "100vw",
-              height: "100vh",
+              height: "90vh",
             }}>
             <Typography
               variant='h2'
@@ -43,7 +43,7 @@ export default function PromoVideo() {
               src='/assets/Kia-Temp.png'
               style={{
                 width: "100vw",
-                height: "100vh",
+                height: "90vh",
               }}
             />
           </div>
@@ -52,7 +52,7 @@ export default function PromoVideo() {
           style={{ width: "100vw", height: "100vh", objectFit: "cover" }}
           id='myVideo'
           width='100%'
-          height='100vh'
+          height='90vh'
           autoPlay
           muted>
           <source src={"/assets/SportageIntro-Film.webm"} type='video/webm' />
