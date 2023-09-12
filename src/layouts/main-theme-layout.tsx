@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           width={'0px'}
           height={'0px'}
           style={{ visibility: "hidden",position:'absolute',zIndex:'-1000' }}
-          src={`/assets/car-colors/${item}-min.png`}
+          src={`/assets/cars/${item}.webp`}
         />
       ))}
       <MainAppBar />

@@ -5,24 +5,17 @@ import styles from "./styles/styles.module.css";
 export default function ColorVariants() {
   const [selectedColorImage, setSelectedColorImage] = useState("Black");
   const [images, setImages] = useState<HTMLImageElement[]>([]);
-  const colors = [
-    "Blue",
-    "White",
-    "Green",
-    "Silver",
-    "Black",
-  ];
+  const colors = ["Blue", "White", "Green", "Silver", "Black"];
 
   return (
     <>
-      
       <div id='mainColor' className={styles.colorsMainContainer}>
         <img
           alt='color'
           className={styles.mainImage}
           width={100}
           height={100}
-          src={`/assets/car-colors/${selectedColorImage}-min.png`}
+          src={`/assets/cars/${selectedColorImage}.webp`}
         />
         <div className={styles.colorBallContainer}>
           {colors.map((color, index) => (
