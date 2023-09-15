@@ -14,8 +14,8 @@ export default function Home() {
       <Layout>
         <PromoVideo key={"promoVideo"} />
         <BeautyShoot />
-        {/* <ColorVariants /> */}
-        {/* <LightsSection /> */}
+        <ColorVariants />
+        <LightsSection />
         <AppView />
         <Footer />
       </Layout>
