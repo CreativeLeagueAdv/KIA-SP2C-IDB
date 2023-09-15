@@ -4,17 +4,21 @@ import ColorVariants from "../src/components/color-variants";
 import { Box } from "@mui/material";
 import BeautyShoot from "../src/components/beauty-shoot";
 import LightsSection from "../src/components/lights-section/slider";
-
+import FullImagePreview from '../src/components/360-images'
+import Footer from '../src/components/footer'
+import AppView from "../src/components/360-images";
 export default function Home() {
 
   return (
     <>
       <Layout>
-        <Box sx={{width:'100%'}} >
+        <Box sx={{ width: "100%" }}>
           <PromoVideo key={"promoVideo"} />
-          <BeautyShoot/>
+          <BeautyShoot />
           <ColorVariants />
-          <LightsSection/>
+          <LightsSection />
+          <AppView/>
+          <Footer/>
         </Box>
       </Layout>
     </>

@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"../src/components/360-images/index.jsx -> react-photo-sphere-viewer\":{\"id\":\"../src/components/360-images/index.jsx -> react-photo-sphere-viewer\",\"files\":[\"static/chunks/node_modules_react-photo-sphere-viewer_dist_index_js.js\"]}}"

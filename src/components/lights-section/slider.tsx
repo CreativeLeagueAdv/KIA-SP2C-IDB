@@ -40,7 +40,7 @@ function SampleNextArrow(props: any) {
 export default function MainSlider() {
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -53,7 +53,7 @@ export default function MainSlider() {
 
   return (
     <>
-      <style>{`
+      {/* <style>{`
       .slick-next{
         right:0px !important
       }
@@ -63,7 +63,7 @@ export default function MainSlider() {
        .slick-prev::before{
       content:''
       }
-      `}</style>
+      `}</style> */}
       <div id='lights' style={{ height: "95vh", width: "100vw" }}>
         <Slider {...settings}>
           <LightsSection type='Head' initial={"Off"} />
