@@ -19,53 +19,67 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: #05141f;
   }
 }
 
- .slick-next {
-   right: 0px !important;
+.view-container {
   @media only screen and (max-width: 768px) {
-      top: 25% !important;
-    }
- }
+    height: 50vh !important;
+  }
+}
 
- .slick-prev {
-   left: 0px !important;
-    @media only screen and (max-width: 768px) {
-        top: 25% !important;
-      }
- }
+.slick-next {
+  right: 0px !important;
 
- .slick-prev::before {
-   content: ''
- }
+  @media only screen and (max-width: 768px) {
+    top: 25% !important;
+  }
+}
 
- .psv-zoom-button , .psv-zoom-range , .psv-fullscreen-button{
+.slick-prev {
+  left: 0px !important;
+
+  @media only screen and (max-width: 768px) {
+    top: 25% !important;
+  }
+}
+
+.slick-prev::before {
+  content: ''
+}
+
+.psv-zoom-button,
+.psv-zoom-range,
+.psv-fullscreen-button {
   display: none;
- }
- 
-.psv-navbar .psv--capture-event .psv-navbar--open{
+}
+
+.psv-navbar .psv--capture-event .psv-navbar--open {
   top: 0 !important;
 }
-.psv-button-svg{
+
+.psv-button-svg {
   color: #fff;
   width: 42px !important;
   height: 42px !important;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
   padding: 10px;
-  
+
 
 }
-.psv-navbar{
+
+.psv-navbar {
   background-color: transparent !important;
   top: 45% !important;
   left: 46% !important;
-  
+
 }
-.psv-button--active{
+
+.psv-button--active {
   background-color: transparent !important;
 }

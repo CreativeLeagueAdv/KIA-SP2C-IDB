@@ -1,0 +1,78 @@
+.footerContainer {
+    height: 92vh;
+    background: #05141f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @media only screen and (max-width: 768px) {
+            height: auto;
+        }
+}
+
+.imageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center
+}
+
+.socialContainer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 64px
+}
+
+.imageBoxContainer {
+    display: flex;
+    align-items: center;
+    gap: 24px
+}
+
+.imageBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media only screen and (max-width: 768px) {
+        justify-content: center;
+    }
+}
+
+.imageText {
+    font-size: 22px;
+    color: #fff;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 18px;
+        width: 280px;
+        text-align: center;
+    }
+}
+
+.button {
+    color: white;
+    border-color: #fff;
+    padding: 15px;
+    font-size: 16px
+}
+
+.image {
+    width: 460px;
+    height: 230px;
+
+    @media only screen and (max-width: 768px) {
+        width: 280px;
+    }
+
+}
+.copyRight{
+    @media only screen and (max-width: 768px) {
+          margin-top: 50px;
+        }
+}
+.copyText{
+    margin-top: 16px;
+     color: gray;
+}

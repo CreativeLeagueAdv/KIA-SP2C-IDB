@@ -12,14 +12,12 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <Box sx={{ width: "100%" }}>
-          <PromoVideo key={"promoVideo"} />
-          <BeautyShoot />
-          <ColorVariants />
-          <LightsSection />
-          <AppView/>
-          <Footer/>
-        </Box>
+        <PromoVideo key={"promoVideo"} />
+        <BeautyShoot />
+        {/* <ColorVariants /> */}
+        {/* <LightsSection /> */}
+        <AppView />
+        <Footer />
       </Layout>
     </>
   );
