@@ -1,12 +1,12 @@
 import { Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-
+import styles from "./styles/styles.module.css";
 export default function PromoVideo() {
   const [showBanner, setShowBanner] = useState(false);
   const router = useRouter();
   function handleVideoEnd() {
-   setShowBanner(true)
+    setShowBanner(true);
   }
   useEffect(() => {
     window?.document
@@ -17,27 +17,8 @@ export default function PromoVideo() {
     <div id='promo'>
       <div style={{ position: "relative" }}>
         {showBanner && (
-          <div
-            style={{
-              position: "absolute",
-              left: "0",
-              width: "100vw",
-              height: "90vh",
-            }}>
-            <Typography
-              variant='h2'
-              sx={{
-                marginInlineStart: "50px",
-                marginTop: "70px",
-                position: "absolute",
-                width: "500px",
-                textTransform: "uppercase",
-                fontWeight: "500",
-                fontSize: "53px",
-              }}>
-              {" "}
-              The All-New SELTOS
-            </Typography>
+          <div className={styles.promoContainer}>
+            <Typography className={styles.text}> The All-New SELTOS</Typography>
             <img
               id='bannerImage'
               src='/assets/Kia-Temp.png'
@@ -49,7 +30,7 @@ export default function PromoVideo() {
           </div>
         )}
         <video
-          style={{ width: "100vw", height: "100vh", objectFit: "cover" }}
+          className={styles.videoClass}
           id='myVideo'
           width='100%'
           height='90vh'

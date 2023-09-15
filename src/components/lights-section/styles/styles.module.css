@@ -1,0 +1,59 @@
+.container {
+    height: 95vh;
+    width: 100vw;
+
+    @media only screen and (max-width: 768px) {
+        height: 50vh;
+    }
+}
+
+.textHeadContainer {
+    position: absolute;
+    left: 0;
+    bottom: 9%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.textHead {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 25px;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 24px;
+    }
+}
+
+.textDescription {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 25px;
+    @media only screen and (max-width: 768px) {
+        font-size: 18px;
+        }
+}
+
+.controlButtons {
+    border: 1px solid #fff;
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 16px;
+    display: flex;
+    gap: 10px;
+    @media only screen and (max-width: 768px) {
+            padding: 0px;
+        }
+}
+
+.controlText {
+    color: #fff;
+    font-size: 22px;
+    @media only screen and (max-width: 768px) {
+            font-size: 16px;
+        }
+
+}

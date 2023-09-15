@@ -1,7 +1,7 @@
 
 
 import { Stack, Typography } from "@mui/material";
-
+import styles from '../text-heading/styles.module.css'
 export default function TextDescription({
   firstLine,
   secondLine,
@@ -16,6 +16,7 @@ export default function TextDescription({
       direction={"column"}
       alignItems={"center"}
       justifyContent={"center"}
+      className={styles.responsive}
       width={"100%"}>
       <Typography
         sx={{ textShadow: "0px 0px 20px rgba(0, 0, 0, 0.64)" }}

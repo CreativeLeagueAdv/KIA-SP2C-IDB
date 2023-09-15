@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-import { Stack } from "@mui/material";
 import styles from "../color-variants/styles/styles.module.css";
 import TextHeading from "../shared/text-heading";
 import TextDescription from "../shared/text-description";

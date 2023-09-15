@@ -32,7 +32,7 @@ export default function AppSideMenu({
     <Box
       sx={{
         width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
-        background: "black",
+        background: "#05141f",
       }}
       role='presentation'
       onClick={toggleDrawer(false)}
@@ -66,7 +66,7 @@ export default function AppSideMenu({
     <SwipeableDrawer
       PaperProps={{
         style: {
-          background:'#000'
+          background:'#05141f'
         }
       }}
       anchor={"left"}

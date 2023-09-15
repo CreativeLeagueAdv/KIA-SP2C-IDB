@@ -48,3 +48,4 @@ export const SwitchButton = styled(Switch)(({ theme }) => ({
     borderRadius: 20 / 2,
   },
 }));
+
