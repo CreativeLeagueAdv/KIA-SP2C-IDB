@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   const colors = ["Blue", "White", "Green", "Silver", "Black"];
 
   return (
-    <div id='layout' style={{ background: "#000"}}>
+    <div id='layout' style={{ background: "#05141f",width:'100vw'}}>
       {colors.map((item) => (
         <img
           width={'0px'}

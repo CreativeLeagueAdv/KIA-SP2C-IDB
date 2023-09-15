@@ -21,16 +21,22 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: #05141f;
   }
 }
 
  .slick-next {
-   right: 0px !important
+   right: 0px !important;
+  @media only screen and (max-width: 768px) {
+      top: 25% !important;
+    }
  }
 
  .slick-prev {
-   left: 0px !important
+   left: 0px !important;
+    @media only screen and (max-width: 768px) {
+        top: 25% !important;
+      }
  }
 
  .slick-prev::before {
@@ -51,6 +57,7 @@ a {
   background-color: rgba(0,0,0,0.6);
   border-radius: 50%;
   padding: 10px;
+  
 
 }
 .psv-navbar{

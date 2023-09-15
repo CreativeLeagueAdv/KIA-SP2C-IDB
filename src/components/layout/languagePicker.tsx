@@ -31,7 +31,7 @@ export default function LanguagePicker() {
         MenuListProps={{
           "aria-labelledby": "language-button",
           style: {
-            background: "black",
+            background: "#05141f",
             color: "white",
           },
         }}>

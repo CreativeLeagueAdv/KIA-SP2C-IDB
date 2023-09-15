@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import LightsSection from ".";
+import styles from './styles/styles.module.css'
 function SamplePrevArrow(props: any) {
   const { className, style, onClick } = props;
   return (
@@ -53,18 +54,7 @@ export default function MainSlider() {
 
   return (
     <>
-      {/* <style>{`
-      .slick-next{
-        right:0px !important
-      }
-      .slick-prev{
-        left:0px !important
-      }
-       .slick-prev::before{
-      content:''
-      }
-      `}</style> */}
-      <div id='lights' style={{ height: "95vh", width: "100vw" }}>
+      <div id='lights' className={styles.container}>
         <Slider {...settings}>
           <LightsSection type='Head' initial={"Off"} />
           <LightsSection type='Tail' initial={"Off"} />

@@ -1,0 +1,18 @@
+.heading {
+    font-size: 59px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.64);
+
+    @media only screen and (max-width: 768px) {
+        font-size: 24px;
+    }
+}
+
+.secondLine {
+    @media only screen and (max-width: 768px) {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}

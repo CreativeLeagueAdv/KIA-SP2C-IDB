@@ -10,7 +10,7 @@ export default function MainAppBar() {
     const[isSideBarOpen,setIsSideBarOpen]=React.useState(false)
   return (
     <React.Fragment key={"left"}>
-      <AppBar style={{ background: "black" }} position='sticky'>
+      <AppBar style={{ background: "#05141f" }} position='sticky'>
         <Toolbar variant='regular' className={styles.toolBar}>
           <Button
             onClick={() => {
@@ -19,7 +19,13 @@ export default function MainAppBar() {
             className={styles.menuButton}>
             <MenuIcon />
           </Button>
-          <Image alt='logo' src='/assets/kia.webp' width={85} height={60} />
+          <Image
+            alt='logo'
+            src='/assets/logoWhite.png'
+            width={142}
+            height={33}
+            className={styles.logo}
+          />
           <LanguagePicker />
         </Toolbar>
       </AppBar>

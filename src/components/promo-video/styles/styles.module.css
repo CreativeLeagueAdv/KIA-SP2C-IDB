@@ -1,9 +1,51 @@
 .toolBar {
     display: flex !important;
     align-items: center !important;
-    justify-content: space-between !important;}
+    justify-content: space-between !important;
+}
 
-    .menuButton{
-        margin-right: 2rem !important;
-        color: white !important
+.menuButton {
+    margin-right: 2rem !important;
+    color: white !important
+}
+
+.promoContainer {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+
+    @media only screen and (max-width: 768px) {
+        height: 50vh;
     }
+
+    .text {
+        margin-inline-start: 50px;
+        margin-top: 70px;
+        position: absolute;
+        width: 500px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 53px;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 24px;
+            width: 100%;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+    }
+}
+
+.videoClass {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+
+    @media only screen and (max-width: 768px) {
+        height: 50vh;
+    }
+
+
+}

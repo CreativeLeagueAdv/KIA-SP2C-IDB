@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from "react";
 import styles from "../color-variants/styles/styles.module.css";
+import controlStyles from "./styles/styles.module.css";
 import { Button, FormControlLabel, Switch, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { SwitchButton } from "./styles";
@@ -13,19 +14,10 @@ export default function LightsSection({
   initial: "Off" | "On";
 }) {
   const [state, setState] = useState<"Off" | "On">("Off");
-  const images = [
-    "/assets/TaillightOn.webp",
-    "/assets/TaillightOff.webp",
-    "/assets/HeadlightOff.webp",
-    "/assets/HeadlightOn.webp",
-  ];
 
   return (
     <>
-      <div
-        id='mainColor'
-        className={styles.colorsMainContainer}
-        style={{ height: "95vh" }}>
+      <div id='mainColor' className={styles.colorsMainContainer}>
         <img
           alt='color'
           className={styles.mainImage}
@@ -34,43 +26,19 @@ export default function LightsSection({
           style={{ transition: "width 2s" }}
           src={`/assets/${type}light${state ?? "Off"}.webp`}
         />
-        <div
-          style={{
-            position: "absolute",
-            left: "0",
-            bottom: "9%",
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "20px",
-          }}>
-          <Typography
-            style={{
-              fontSize: "42px",
-              fontWeight: "600",
-              lineHeight: "25px",
-            }}>
+        <div className={controlStyles.textHeadContainer}>
+          <Typography className={controlStyles.textHead}>
             FULL LED HEADLIGHTS
           </Typography>
-          <Typography
-            style={{ fontSize: "22px", fontWeight: "300", lineHeight: "25px" }}>
+          <Typography className={controlStyles.textDescription}>
             LED Taillights for Distinctive Look
           </Typography>
-          <div
-            style={{
-              border: "1px solid #fff",
-              backgroundColor: "rgba(0,0,0,0.55)",
-              padding: "16px",
-              display: "flex",
-              gap: "10px",
-            }}>
+          <div className={controlStyles.controlButtons}>
             <Button
               variant='text'
-              sx={{ color: "#fff", fontSize: "22px" }}
+              className={controlStyles.controlText}
               onClick={() => {
-                setState("On");
+                setState("Off");
               }}>
               OFF
             </Button>
@@ -87,10 +55,10 @@ export default function LightsSection({
               label=''
             />
             <Button
-              sx={{ color: "#fff", fontSize: "22px" }}
+              className={controlStyles.controlText}
               variant='text'
               onClick={() => {
-                setState("Off");
+                setState("On");
               }}>
               ON
             </Button>
