@@ -1,0 +1,45 @@
+.container {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 95vh;
+    padding: 24px;
+
+    position: relative;
+
+    @media only screen and (max-width: 768px) {
+        height: 50vh;
+        padding: 10px;
+    }
+}
+
+.headText {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0px;
+    z-index: 3;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1rem;
+    }
+
+}
+
+.description {
+    color: #fff;
+    font-size: 1rem;
+    width: 60%;
+    text-align: center;
+    line-height: 1.5;
+    z-index: 3;
+
+    @media only screen and (max-width: 768px) {
+        width: 96%;
+        font-size: 12px;
+    }
+
+}
