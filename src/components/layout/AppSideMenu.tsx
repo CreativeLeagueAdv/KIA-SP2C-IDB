@@ -43,6 +43,13 @@ export default function AppSideMenu({
           { key: "Beauty Shoot", link: "#shoot" },
           { key: "Color Variants", link: "#colors" },
           { key: "Head/Tail Lights", link: "#lights" },
+          { key: "Panorama 360 View ", link: "#pano360" },
+          { key: "Interior Feature", link: "#interior" },
+          { key: "Safety Feature", link: "#safety" },
+          { key: "Technology Feature", link: "#technology" },
+          { key: "Specifications", link: "#specifications" },
+          { key: "Beauty Shoot 2", link: "#shoot2" },
+          { key: "Footer", link: "#footer" },
         ].map((text, index) => (
           <>
             <ListItem

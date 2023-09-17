@@ -20,7 +20,10 @@ function AppView () {
 
 
     return (
-        <ReactPhotoSphereViewer touchmoveTwoFingers={false} src="/assets/Sportage-GT-Interior-360.jpg" height={'100vh'} width={"100%"}></ReactPhotoSphereViewer>
+        <div id='pano360'>
+            <ReactPhotoSphereViewer touchmoveTwoFingers={false} src="/assets/Sportage-GT-Interior-360.jpg" height={'100vh'} width={"100%"}></ReactPhotoSphereViewer>
+
+        </div>
 
     );
 }

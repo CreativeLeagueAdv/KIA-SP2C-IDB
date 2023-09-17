@@ -5,7 +5,7 @@ export default function Footer (params) {
 
     return (
 
-        <div className={styles.footerContainer}>
+        <div id='footer'  className={styles.footerContainer}>
             <div className={styles.imageContainer} >
 
                 <h4 style={{ color: '#fff' }}>SHARE SPORTAGE DIGITAL BROCHURE</h4>
@@ -21,13 +21,13 @@ export default function Footer (params) {
                 </div>
                 <Stack className={styles.imageBoxContainer} direction={{ xl: 'row', lg: 'row', md: 'row', xs: 'column', sm: 'column' }}>
                     <div className={styles.imageBox}>
-                        <img src='http://cladv.net/wp-content/uploads/2023/08/Sportage-Test-Drive-Box.webp' className={styles.image} />
+                        <img src='/assets/testDrive.webp' className={styles.image} />
                         <p className={styles.imageText}>EXPERIENCE A SPORTAGE FOR YOURSELF
                         </p>
                         <Button variant='outlined' className={styles.button} >Test Drive</Button>
                     </div>
                     <div className={styles.imageBox}>
-                        <img src='http://cladv.net/wp-content/uploads/2023/08/Kia-Showroom.webp' className={styles.image} />
+                        <img src='/assets/locations.webp' className={styles.image} />
                         <p className={styles.imageText} >FIND THE NEAREST DEALER TO YOU
                         </p>
                         <Button variant='outlined' className={styles.button} >Locations</Button>

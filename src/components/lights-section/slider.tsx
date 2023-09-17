@@ -3,8 +3,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import LightsSection from ".";
 import styles from './styles/styles.module.css'
+import { ReactNode } from "react";
 function SamplePrevArrow(props: any) {
   const { className, style, onClick } = props;
   return (
@@ -38,7 +38,7 @@ function SampleNextArrow(props: any) {
     />
   );
 }
-export default function MainSlider() {
+export default function MainSlider({ children }: { children: ReactNode[] }) {
   const settings = {
     dots: false,
     infinite: true,
@@ -48,17 +48,14 @@ export default function MainSlider() {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     style: {
-      height: "95vh",
+      height: "97vh",
     },
   };
 
   return (
     <>
       <div id='lights' className={styles.container}>
-        <Slider {...settings}>
-          <LightsSection type='Head' initial={"Off"} />
-          <LightsSection type='Tail' initial={"Off"} />
-        </Slider>
+        <Slider {...settings}>{children.map((item)=>item)}</Slider>
       </div>
     </>
   );
