@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from "./styles/styles.module.css";
+import { useTranslation } from "react-i18next";
 export default function PromoVideo() {
   const [showBanner, setShowBanner] = useState(false);
   const router = useRouter();
@@ -13,6 +14,7 @@ export default function PromoVideo() {
       ?.getElementById("myVideo")
       ?.addEventListener("ended", handleVideoEnd, false);
   }, [router.isReady]);
+    const { t, i18n } = useTranslation("common");
   return (
     <div id='promo'>
       <div style={{ position: "relative" }}>
@@ -34,10 +36,13 @@ export default function PromoVideo() {
           id='myVideo'
           width='100%'
           height='90vh'
+          controls={true}
+          
           autoPlay
           muted>
           <source src={"/assets/SportageIntro-Film.webm"} type='video/webm' />
         </video>
+       
       </div>
     </div>
   );

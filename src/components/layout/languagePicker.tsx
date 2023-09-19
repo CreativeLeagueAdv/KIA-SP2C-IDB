@@ -1,13 +1,24 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import { Menu, MenuItem } from "@mui/material";
+import { useTranslation } from "react-i18next";
+import Cookies from "js-cookie";
+import { useRouter } from "next/router";
+import LanguageIcon from "@mui/icons-material/Language";
 export default function LanguagePicker() {
+  const { t, i18n } = useTranslation("common");
+  const { reload } = useRouter();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: any) => {
-    setAnchorEl(event.currentTarget);
+    setAnchorEl(anchorEl ? null : event.currentTarget);
   };
-  const handleClose = () => {
+  const handleClose = (lang?: any) => {
+    if (typeof lang =='string') {
+      i18n.changeLanguage(lang);
+      Cookies.set("language", lang);
+      reload();
+    }
     setAnchorEl(null);
   };
 
@@ -19,9 +30,9 @@ export default function LanguagePicker() {
         aria-haspopup='true'
         aria-expanded={open ? "true" : undefined}
         variant='outlined'
-        sx={{ color: "white", borderColor: "white" }}
+        sx={{ color: "white", borderColor: "transparent" }}
         onClick={handleClick}>
-        Language
+        <LanguageIcon style={{ width: "30px", height: "30px" }} />
       </Button>
       <Menu
         id='language-menu'
@@ -35,8 +46,8 @@ export default function LanguagePicker() {
             color: "white",
           },
         }}>
-        <MenuItem onClick={handleClose}>العربية</MenuItem>
-        <MenuItem onClick={handleClose}>ِEnglish</MenuItem>
+        <MenuItem onClick={() => handleClose("ar")}>العربية</MenuItem>
+        <MenuItem onClick={() => handleClose("en")}>ِEnglish</MenuItem>
       </Menu>
     </>
   );

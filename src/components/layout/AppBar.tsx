@@ -10,7 +10,7 @@ export default function MainAppBar() {
     const[isSideBarOpen,setIsSideBarOpen]=React.useState(false)
   return (
     <React.Fragment key={"left"}>
-      <AppBar style={{ background: "#05141f" }} position='sticky'>
+      <AppBar style={{ background: "#05141f",position:'static' }} position='sticky'>
         <Toolbar variant='regular' className={styles.toolBar}>
           <Button
             onClick={() => {
