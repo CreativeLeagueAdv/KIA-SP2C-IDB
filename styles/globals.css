@@ -83,3 +83,13 @@ a {
 .psv-button--active {
   background-color: transparent !important;
 }
+.psv-button{
+  display: none;
+}
+
+video::-webkit-media-controls-time-remaining-display{
+  display: none;
+}
+video::-webkit-media-controls-time-remaining{
+  display: none;
+}

@@ -5,10 +5,11 @@ import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import AdsClickIcon from "@mui/icons-material/AdsClick";
 import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
+import Image from "next/image";
+import CloseIcon from "@mui/icons-material/Close";
 export default function AppSideMenu({
   isSideBarOpen,
   setIsSideBarOpen,
@@ -28,38 +29,63 @@ export default function AppSideMenu({
     setIsSideBarOpen(open);
   };
   const router = useRouter();
+  const { t, i18n } = useTranslation("common");
+
   const list = (anchor: any) => (
     <Box
       sx={{
         width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
         background: "#05141f",
+        marginTop: "20px",
+        marginInlineStart: "50px",
+        position: "relative",
       }}
       role='presentation'
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}>
+      <CloseIcon
+        style={{
+          position: "absolute",
+          top: "0",
+          insetInlineEnd: "30px",
+          color: "#fff",
+          cursor: "pointer !important",
+          width: '48px',
+          height:'48px'
+        }}
+      />
       <List>
+        <ListItem
+          style={{ padding: "0px", marginBottom: "30px", marginTop: "68px" }}>
+          <Image
+            alt='logo'
+            src='/assets/logoWhite.png'
+            width={120}
+            height={29}
+          />
+        </ListItem>
         {[
-          { key: "Promo Video", link: "#promo" },
-          { key: "Beauty Shoot", link: "#shoot" },
-          { key: "Color Variants", link: "#colors" },
-          { key: "Head/Tail Lights", link: "#lights" },
-          { key: "Panorama 360 View ", link: "#pano360" },
-          { key: "Interior Feature", link: "#interior" },
-          { key: "Safety Feature", link: "#safety" },
-          { key: "Technology Feature", link: "#technology" },
-          { key: "Specifications", link: "#specifications" },
-          { key: "Beauty Shoot 2", link: "#shoot2" },
-          { key: "Footer", link: "#footer" },
+          { key: "Welcome", link: "#promo" },
+          { key: "Exteriors", link: "#Exteriors" },
+          { key: "Interiors", link: "#Interiors" },
+          { key: "Safety", link: "#Safety" },
+          { key: "Technology", link: "#Technology" },
+          { key: "Specifications", link: "#Specifications" },
+          { key: "Summary", link: "#Summary" },
         ].map((text, index) => (
           <>
             <ListItem
+              style={{ padding: "0px", marginBottom: "30px" }}
               key={text?.key}
               onClick={() => router.push(`${text.link}`)}>
-              <ListItemButton>
-                <ListItemIcon>
-                  <AdsClickIcon sx={{ color: "#fff" }} />
-                </ListItemIcon>
-                <ListItemText sx={{ color: "#fff" }} primary={text?.key} />
+              <ListItemButton style={{ padding: "0px" }}>
+                <ListItemText
+                  primaryTypographyProps={{ fontSize: "26px" }}
+                  sx={{
+                    color: "#fff",
+                  }}
+                  primary={t(text?.key)}
+                />
               </ListItemButton>
             </ListItem>
             <Divider />
@@ -73,10 +99,10 @@ export default function AppSideMenu({
     <SwipeableDrawer
       PaperProps={{
         style: {
-          background:'#05141f'
-        }
+          background: "#05141f",
+        },
       }}
-      anchor={"left"}
+      anchor={i18n?.language=='en'?"left":'right'}
       open={isSideBarOpen}
       onClose={toggleDrawer(false)}
       onOpen={toggleDrawer(true)}>

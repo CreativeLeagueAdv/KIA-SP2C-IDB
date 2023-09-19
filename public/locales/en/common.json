@@ -1,3 +1,30 @@
 {
-  "hello": "Hello"
+  "hello": "مرحبا",
+  "Welcome": "Welcome",
+  "Exteriors": "Exteriors",
+  "Interiors": "Interiors",
+  "Safety": "Safety",
+  "Technology": "Technology",
+  "Specifications": "Specifications",
+  "Summary": "Summary",
+  "newSeltos": "The new Seltos",
+  "beauty1Head": "More than a small SUV. It’s a statement.",
+  "beauty1Desc": "The Seltos builds on a solid reputation of sharp, dynamic design, powerful aesthetics, and cutting edge technology. Add in unprecedented levels of connectivity and new, distinctive design elements, and the Seltos sets a new benchmark in small SUV design. Again",
+  "colorVariants": "Exterior Colors",
+  "oneTone": "One-Tone",
+  "twoTone": "Two-Tone",
+  "lightsHead":"Exterior Lighting",
+  "on":"on",
+  "off":"off",
+  "AppView":"360VR Interior",
+  "front":"front",
+  "rear":"rear",
+  "turnLight":"Turn lights on/off",
+  "wheelVariantions":"Wheels Variations",
+  "wheelDesc":"This is a wheel description area",
+  "rotateWheel":"Drag to Rotate Wheels",
+  "testDrive":"test drive",
+  "locations":"locations"
+
+
 }

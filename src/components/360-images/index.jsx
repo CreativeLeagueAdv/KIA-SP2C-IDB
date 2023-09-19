@@ -21,7 +21,7 @@ function AppView () {
 
     return (
         <div id='pano360'>
-            <ReactPhotoSphereViewer touchmoveTwoFingers={false} src="/assets/Sportage-GT-Interior-360.jpg" height={'100vh'} width={"100%"}></ReactPhotoSphereViewer>
+            <ReactPhotoSphereViewer mousewheel={false}  zoomSpeed={0} onZoomChange={()=>{}} touchmoveTwoFingers={false} src="/assets/Sportage-GT-Interior-360.jpg" height={'100vh'} width={"100%"}></ReactPhotoSphereViewer>
 
         </div>
 
