@@ -1,10 +1,10 @@
 .headText {
     color: #05141F;
-    font-size: 59px;
+    font-size: 36px;
     width: 100%;
     text-align: center;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 600;
+    text-transform: capitalize;
     margin: 0px;
 
     @media only screen and (max-width: 768px) {
@@ -14,13 +14,13 @@
 
 .container {
     width: 100%;
-    min-height: 98vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: start;
     background-color: #fff;
-    padding: 24px;
+    padding: 60px 0px;
 
 }
 
@@ -39,9 +39,10 @@
 
 .gridList {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    padding: 60px 100px;
     width: 100%;
     flex-wrap: wrap;
 
@@ -93,4 +94,22 @@
     @media only screen and (max-width: 768px) {
         width: 100%;
     }
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.itemText {
+    color: #05141F !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    max-width: 150px;
+    text-align: center;
+    min-height: 60px;
 }

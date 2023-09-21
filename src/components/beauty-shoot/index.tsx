@@ -16,7 +16,7 @@ export default function BeautyShoot({
 }) {
   return (
     <div
-      id={image?'shoot2':'shoot'}
+      id={image ? "shoot2" : "shoot"}
       className={styles.colorsMainContainer}
       style={{ position: "relative" }}>
       <img
@@ -24,15 +24,15 @@ export default function BeautyShoot({
         className={styles.mainImage}
         width={100}
         height={100}
-        src={image?image:`/assets/beauty.webp`}
+        src={image ? image : `/assets/beauty.webp`}
       />
       <FloatingTextSection>
         <TextHeading firstLine={textHead1} secondLine={textHead2} />
         {desc ? (
           <TextDescription
-            firstLine='The all-new Kia Sportage. Bold and contemporary design. Built with the latest innovation.'
-            secondLine='So you feel more confident when you’re on the move. No matter where life takes you. For those who keep moving.'
-            thirdLine='For those who keep seeking. Inspiration is never out of reach.'
+            firstLine='The Seltos builds on a solid reputation of sharp, dynamic design, powerful aesthetics, and cutting edge technology.'
+            secondLine=' Add in unprecedented levels of connectivity and new, distinctive design elements, and the Seltos sets a new benchmark in'
+            thirdLine='small SUV design. Again'
           />
         ) : (
           ""

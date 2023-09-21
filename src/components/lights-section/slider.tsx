@@ -40,7 +40,7 @@ function SampleNextArrow(props: any) {
 }
 export default function MainSlider({ children }: { children: ReactNode[] }) {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 800,
     slidesToShow: 1,
@@ -48,7 +48,7 @@ export default function MainSlider({ children }: { children: ReactNode[] }) {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     style: {
-      height: "97vh",
+      height: "100vh",
     },
   };
 

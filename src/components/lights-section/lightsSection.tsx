@@ -4,37 +4,45 @@ import styles from "../color-variants/styles/styles.module.css";
 import controlStyles from "./styles/styles.module.css";
 import { Button, FormControlLabel, Typography } from "@mui/material";
 import { SwitchButton } from "./styles";
+import HeadingWithSelect from "../color-variants/headingWithSelections";
 
 export default function LightsSection({
   type,
   initial,
 }: {
-  type: "Tail" | "Head";
+  type: "rims" | "lights";
   initial: "Off" | "On";
 }) {
   const [state, setState] = useState<"Off" | "On">("Off");
-
+  const [selectedView, setSelectedView] = useState<"Tail" | "Head">("Head");
   return (
     <>
       <div id='mainColor' className={styles.colorsMainContainer}>
         <img
           alt='color'
-          className={styles.mainImage}
+          className={styles.mainLightsImage}
           width={100}
           height={100}
-          style={{ transition: "width 2s" }}
-          src={`/assets/${type}light${state ?? "Off"}.webp`}
+          src={`/assets/${selectedView}light${state ?? "Off"}.webp`}
+        />
+        <HeadingWithSelect
+          headingText='Exterior Lighting'
+          selectedView={selectedView}
+          setSelectedView={(val) => {
+            setSelectedView(val);
+            setState("Off");
+          }}
+          views={["Tail", "Head"]}
         />
         <div className={controlStyles.textHeadContainer}>
-          <Typography className={controlStyles.textHead}>
-            FULL LED HEADLIGHTS
-          </Typography>
-          <Typography className={controlStyles.textDescription}>
-            LED Taillights for Distinctive Look
-          </Typography>
           <div className={controlStyles.controlButtons}>
             <Button
               variant='text'
+              sx={{
+                opacity: state == "Off" ? 1 : 0.68,
+                height: "40px",
+                padding: "0",
+              }}
               className={controlStyles.controlText}
               onClick={() => {
                 setState("Off");
@@ -54,6 +62,11 @@ export default function LightsSection({
               label=''
             />
             <Button
+              sx={{
+                opacity: state == "On" ? 1 : 0.68,
+                height: "40px",
+                padding: "0",
+              }}
               className={controlStyles.controlText}
               variant='text'
               onClick={() => {
@@ -62,6 +75,7 @@ export default function LightsSection({
               ON
             </Button>
           </div>
+          <p style={{ fontSize: "18px", color: "#fff",marginTop:'0px',marginBottom:'0px' }}>Turn lights on/off</p>
         </div>
       </div>
     </>

@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="48px" height="48px"><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M29,3c-5.523,0 -10,4.477 -10,10v5h-6v8h6v19h8v-19h7l1,-8h-8v-4c0,-2.209 1.791,-4 4,-4h4v-6.678c-1.909,-0.197 -4.079,-0.326 -6,-0.322z"></path></g></g></svg>
+<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Facebook Icon">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M25.5393 12.4747H30.5746V6.44141H25.5393C21.6835 6.44141 18.5081 9.61681 18.5081 13.4727V16.4666H14.4708V22.4999H18.5081V38.5583H24.496V22.4999H29.5312L30.5292 16.4666H24.496V13.4727C24.496 12.9283 24.9496 12.4747 25.5393 12.4747Z" fill="white"/>
+</g>
+</svg>

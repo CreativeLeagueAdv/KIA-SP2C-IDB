@@ -10,14 +10,16 @@ export default function MainAppBar() {
     const[isSideBarOpen,setIsSideBarOpen]=React.useState(false)
   return (
     <React.Fragment key={"left"}>
-      <AppBar style={{ background: "#05141f",position:'static' }} position='sticky'>
+      <AppBar
+        style={{ background: "#05141f", position: "static", height: "60px" }}
+        position='sticky'>
         <Toolbar variant='regular' className={styles.toolBar}>
           <Button
             onClick={() => {
               setIsSideBarOpen(true);
             }}
             className={styles.menuButton}>
-            <MenuIcon />
+            <img src='/assets/MenuIcon.svg' />
           </Button>
           <Image
             alt='logo'

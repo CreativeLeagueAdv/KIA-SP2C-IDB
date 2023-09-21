@@ -49,7 +49,7 @@ a {
 }
 
 .slick-prev::before {
-  content: ''
+  content: '' !important
 }
 
 .psv-zoom-button,
@@ -83,13 +83,68 @@ a {
 .psv-button--active {
   background-color: transparent !important;
 }
-.psv-button{
+
+.psv-button {
   display: none;
 }
 
-video::-webkit-media-controls-time-remaining-display{
+video::-webkit-media-controls-time-remaining-display {
   display: none;
 }
-video::-webkit-media-controls-time-remaining{
+
+video::-webkit-media-controls-time-remaining {
   display: none;
+}
+
+.slick-dots li {
+  background-color: #fff !important;
+  width: 40px !important;
+  height: 2px !important;
+  opacity: 1 !important;
+  padding: 0 !important;
+  content: '' !important;
+
+}
+
+.slick-dots li button {
+  background-color: gray !important;
+  width: 40px !important;
+  height: 2px !important;
+  opacity: 1 !important;
+  padding: 0 !important;
+  content: '' !important;
+
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  content: "" !important;
+}
+
+.slick-dots .slick-active button::before {
+  content: '' !important;
+}
+
+.slick-dots .slick-active button {
+  background-color: #fff !important;
+}
+
+.slick-dots li button ::before {
+  color: #fff !important;
+  width: 40px !important;
+  height: 2px !important;
+  padding: 0 !important;
+  opacity: 1 !important;
+  content: '' !important;
+}
+
+.slick-dots {
+  bottom: 25px !important;
+}
+
+.psv-canvas-container canvas {
+  height: 100vh !important;
+}
+.slick-dots li button:before{
+  content:'' !important
 }

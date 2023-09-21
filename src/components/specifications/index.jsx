@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material'
 import AccordionItem from './components/accordion'
 import AccordionDetailsList from './components/accordionList'
 import SpecsList from './components/specsList'
@@ -9,12 +10,38 @@ const SpecsSection = () => {
                 SPECIFICATIONS
 
             </p>
-            <p className={styles.monoText}>HIGHLIGHTS</p>
             <div className={styles.gridList}>
-                <SpecsList header='Capabilities and Comfort' list={[]} />
-                <SpecsList header='Convenience and Innovation' list={[]} />
-                <SpecsList header='Kia Drive Wise Driver Assist Technology' list={[]} />
+                <div className={styles.item}>
+                    <img  width={'80px'} height={'80px'} src='/assets/specs/engine.svg' />
+                    <Typography className={styles.itemText}>1.4T DCT</Typography>
+                </div>
+                <div className={styles.item}>
+                    <img  width={'80px'} height={'80px'} src='/assets/specs/airBag.svg' />
 
+                     <Typography className={styles.itemText}>Front THORAX+ Curtain Airbag</Typography>
+                </div>
+                <div className={styles.item}>
+                    <img  width={'80px'} height={'80px'} src='/assets/specs/CarWhee.svg' />
+
+                     <Typography className={styles.itemText}>Alloy 17” (B-Type)</Typography>
+                </div>
+                <div className={styles.item}>
+                    <img  width={'80px'} height={'80px'} src='/assets/specs/saftey.svg' />
+
+                     <Typography className={styles.itemText}>Keyless Entry</Typography>
+                </div>
+                <div className={styles.item}>
+                    <img  width={'80px'} height={'80px'} src='/assets/specs/aircondition.svg' />
+
+                     <Typography className={styles.itemText}>Dual-Zone Air
+                        Condition</Typography>
+                </div>
+                <div className={styles.item}>
+                    <img  width={'80px'} height={'80px'} src='/assets/specs/verified.png' />
+
+                     <Typography className={styles.itemText}>5-Years /
+                        150,000 Km</Typography>
+                </div>
 
 
             </div>

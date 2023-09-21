@@ -1,21 +1,30 @@
 import { Component, JSXElementConstructor, ReactNode, useEffect } from "react";
 import MainAppBar from "../components/layout/AppBar";
+import { useTranslation } from "react-i18next";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const colors = ["Blue", "White", "Green", "Silver", "Black"];
-
+  const { t, i18n } = useTranslation("common");
   return (
-    <div id='layout' style={{ background: "#05141f",width:'100vw'}}>
+    <>
+      <link rel='prefetch' as='image' href='/assets/TaillightOn.webp' />
+      <link rel='prefetch' as='image' href='/assets/TaillightOff.webp' />
+      <link rel='prefetch' as='image' href='/assets/HeadlightOff.webp' />
+      <link rel='prefetch' as='image' href='/assets/HeadlightOn.webp' />
+      <link rel='preload' as='video' href='/assets/SportageIntro-Film.webm' />
       {colors.map((item) => (
-        <img
-          width={'0px'}
-          height={'0px'}
-          style={{ visibility: "hidden",position:'absolute',zIndex:'-100' }}
-          src={`/assets/cars/${item}.webp`}
-        />
+        <link rel='prefetch' as='image' href='/assets/cars/${item}.webp' />
       ))}
-      <MainAppBar />
-      {children}
-    </div>
+      <div
+        id='layout'
+        style={{
+          background: "#05141f",
+          width: "100vw",
+          direction: i18n?.language == "en" ? "ltr" : "rtl",
+        }}>
+        <MainAppBar />
+        {children}
+      </div>
+    </>
   );
 }

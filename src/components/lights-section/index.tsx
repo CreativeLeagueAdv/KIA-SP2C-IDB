@@ -4,8 +4,8 @@ import MainSlider from "./slider";
 export default function LightsSlider() {
     return (
       <MainSlider>
-          <LightsSection type='Head' initial={"Off"} />
-          <LightsSection type='Tail' initial={"Off"} />
+          <LightsSection type='lights' initial={"Off"} />
+          <LightsSection type='rims' initial={"Off"} />
       
       </MainSlider>
     );
