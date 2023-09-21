@@ -14,21 +14,14 @@ export default function PromoVideo() {
       ?.getElementById("myVideo")
       ?.addEventListener("ended", handleVideoEnd, false);
   }, [router.isReady]);
-    const { t, i18n } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
   return (
     <div id='promo'>
       <div style={{ position: "relative" }}>
         {showBanner && (
           <div className={styles.promoContainer}>
-            <Typography className={styles.text}> The All-New SELTOS</Typography>
-            <img
-              id='bannerImage'
-              src='/assets/Kia-Temp.png'
-              style={{
-                width: "100vw",
-                height: "90vh",
-              }}
-            />
+            <Typography className={styles.text}>The new Seltos</Typography>
+            <img src='/assets/mouseIcon.svg'/>
           </div>
         )}
         <video
@@ -37,12 +30,10 @@ export default function PromoVideo() {
           width='100%'
           height='90vh'
           controls={true}
-          
           autoPlay
           muted>
           <source src={"/assets/SportageIntro-Film.webm"} type='video/webm' />
         </video>
-       
       </div>
     </div>
   );

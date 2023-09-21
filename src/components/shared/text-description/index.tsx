@@ -10,7 +10,8 @@ export default function TextDescription({
   firstLine: string;
   secondLine: string;
   thirdLine: string;
-}) {
+  }) {
+
   return (
     <Stack
       direction={"column"}
@@ -20,7 +21,7 @@ export default function TextDescription({
       width={"100%"}>
       <Typography
         sx={{ textShadow: "0px 0px 20px rgba(0, 0, 0, 0.64)" }}
-        fontSize={"1rem"}
+        fontSize={"1.5rem"}
         fontWeight={"400"}
        
         color={"white"}>
@@ -28,7 +29,7 @@ export default function TextDescription({
       </Typography>
       <Typography
         sx={{ textShadow: "0px 0px 20px rgba(0, 0, 0, 0.64)" }}
-        fontSize={"1rem"}
+        fontSize={"1.5rem"}
         fontWeight={"400"}
        
         color={"white"}>
@@ -36,7 +37,7 @@ export default function TextDescription({
       </Typography>
       <Typography
         sx={{ textShadow: "0px 0px 20px rgba(0, 0, 0, 0.64)" }}
-        fontSize={"1rem"}
+        fontSize={"1.5rem"}
         fontWeight={"400"}
         lineHeight={1}
         color={"white"}>

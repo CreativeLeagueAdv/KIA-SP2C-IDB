@@ -12,18 +12,14 @@ import Safety from "../src/components/Saftey";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 function Home() {
-  const { t, i18n } = useTranslation("common");
   return (
-    <div style={{ direction: i18n?.language == "en" ? "ltr" : "rtl" }}>
-      <img src='/assets/TaillightOn.webp'  style={{width:'0px',height:'0px'}}/>
-      <img src='/assets/TaillightOff.webp'  style={{width:'0px',height:'0px'}}/>
-      <img src='/assets/HeadlightOff.webp'  style={{width:'0px',height:'0px'}}/>
-      <img src='/assets/HeadlightOn.webp'  style={{width:'0px',height:'0px'}}/>
+    <>
       <Layout>
         <PromoVideo key={"promoVideo"} />
         <BeautyShoot
-          textHead1='Bold and Sleek'
-          textHead2='The Ultimate Urban SUV.'
+          textHead1='More than a small SUV. It’s a statement'
+          textHead2=''
+          desc={true}
         />
         <ColorVariants />
         <LightsSlider />
@@ -36,12 +32,12 @@ function Home() {
         <BeautyShoot
           desc={false}
           image={"/assets/finalBeauty.webp"}
-          textHead1={"When You Move,"}
-          textHead2={"Inspiration Is Never Out Of Reach."}
+          textHead1={"Speaks your language"}
+          textHead2={""}
         />
         <Footer />
       </Layout>
-    </div>
+    </>
   );
 }
 

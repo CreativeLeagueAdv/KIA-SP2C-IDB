@@ -24,7 +24,7 @@ export default function SectionItem({
           style={{ position: "absolute", top: "0", left: "0" }}
           id='myVideo'
           width='100%'
-          height='90vh'
+          height='100vh'
           autoPlay
           muted>
           <source src={src} type='video/webm' />

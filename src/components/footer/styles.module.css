@@ -1,13 +1,14 @@
 .footerContainer {
-    height: 92vh;
+    height: 100vh;
     background: #05141f;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
     @media only screen and (max-width: 768px) {
-            height: auto;
-        }
+        height: auto;
+    }
 }
 
 .imageContainer {
@@ -20,8 +21,8 @@
 .socialContainer {
     display: flex;
     align-items: center;
-    gap: 16px;
-    margin-bottom: 64px
+    gap: 10px;
+    margin-bottom: 80px
 }
 
 .imageBoxContainer {
@@ -41,8 +42,10 @@
 }
 
 .imageText {
-    font-size: 22px;
+    font-size: 24px;
     color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
     @media only screen and (max-width: 768px) {
         font-size: 18px;
@@ -52,27 +55,40 @@
 }
 
 .button {
-    color: white;
-    border-color: #fff;
-    padding: 15px;
-    font-size: 16px
+    color: #05141F;
+    background-color: #fff;
+    padding: 15px 25px;
+    font-size: 16px;
+    text-transform: capitalize;
 }
 
 .image {
-    width: 460px;
-    height: 230px;
+    width: 550px;
+    height: 325px;
+    object-fit: cover;
 
     @media only screen and (max-width: 768px) {
         width: 280px;
     }
 
 }
-.copyRight{
+
+.copyRight {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 200px;
     @media only screen and (max-width: 768px) {
-          margin-top: 50px;
-        }
+        margin-top: 50px;
+    }
 }
-.copyText{
+
+.copyText {
     margin-top: 16px;
-     color: gray;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.20);
+    font-size: 16px;
 }

@@ -4,6 +4,7 @@ export default function TextHeading({
   firstLine,
   secondLine,
   secondLineSize='large',
+  
 }: {
   firstLine: string;
   secondLine: string;
