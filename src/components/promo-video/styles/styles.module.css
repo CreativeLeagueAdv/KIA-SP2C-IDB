@@ -20,7 +20,8 @@
     align-items: center;
 
     @media only screen and (max-width: 768px) {
-        height: 50vh;
+        height: 60vh;
+        width: 98%;
     }
 
     .text {
@@ -35,6 +36,7 @@
             width: 100%;
             margin-top: 20px;
             margin-left: 20px;
+            text-align: center;
         }
 
     }
@@ -46,7 +48,7 @@
     object-fit: cover;
 
     @media only screen and (max-width: 768px) {
-        height: 50vh;
+        height: 60vh;
     }
 
 

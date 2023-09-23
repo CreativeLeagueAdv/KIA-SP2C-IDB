@@ -30,7 +30,7 @@ export default function ColorVariants() {
         />
         <div className={styles.colorBalls}>
           <Typography
-            fontSize={"28px"}
+            fontSize={{ xs: "16px", sm: "16px", lg: "28px", xl: "28px" }}
             fontWeight={400}
             mb='10px'
             sx={{ color: "#fff" }}>

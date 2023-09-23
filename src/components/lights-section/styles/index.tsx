@@ -2,12 +2,13 @@ import { Switch } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const SwitchButton = styled(Switch)(({ theme }) => ({
-  width: 55,
+  width: 46,
   height: 30,
   padding: 7,
   "& .MuiSwitch-switchBase": {
     margin: 1,
     padding: 0,
+    top:'6.5px !important',
     transform: "translateX(6px)",
     "&.Mui-checked": {
       color: "#fff",
@@ -26,14 +27,16 @@ export const SwitchButton = styled(Switch)(({ theme }) => ({
   },
   "& .MuiSwitch-thumb": {
     backgroundColor: theme.palette.mode === "dark" ? "red" : "rgba(0,0,025)",
-    width: 24,
-    height: 24,
+    width: '15px',
+    height: '15px',
+    top:'6px !important'
    
   },
   "& .MuiSwitch-track": {
     opacity: 1,
     backgroundColor: theme.palette.mode === "dark" ? "#8796A5" : "#8796A5",
     borderRadius: 20 / 2,
+  
   },
 }));
 

@@ -21,7 +21,7 @@ export default function TextDescription({
       width={"100%"}>
       <Typography
         sx={{ textShadow: "0px 0px 20px rgba(0, 0, 0, 0.64)" }}
-        fontSize={"1.5rem"}
+        fontSize={{md:"1.5rem",lg:"1.5rem",xl:"1.5rem",xs:'12px',sm:'12px'}}
         fontWeight={"400"}
        
         color={"white"}>
@@ -29,7 +29,7 @@ export default function TextDescription({
       </Typography>
       <Typography
         sx={{ textShadow: "0px 0px 20px rgba(0, 0, 0, 0.64)" }}
-        fontSize={"1.5rem"}
+        fontSize={{md:"1.5rem",lg:"1.5rem",xl:"1.5rem",xs:'12px',sm:'12px'}}
         fontWeight={"400"}
        
         color={"white"}>
@@ -37,7 +37,7 @@ export default function TextDescription({
       </Typography>
       <Typography
         sx={{ textShadow: "0px 0px 20px rgba(0, 0, 0, 0.64)" }}
-        fontSize={"1.5rem"}
+        fontSize={{md:"1.5rem",lg:"1.5rem",xl:"1.5rem",xs:'12px',sm:'12px'}}
         fontWeight={"400"}
         lineHeight={1}
         color={"white"}>

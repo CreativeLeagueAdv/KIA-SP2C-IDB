@@ -22,7 +22,7 @@ function AppView () {
 
     return (
         <div style={{ position: 'relative' }}>
-            <Typography sx={{ position: 'absolute', top: '60px', fontSize: '36px ', color: '#fff', zIndex: 1000, width: '100%', textAlign: 'center' }}>360VR Interior</Typography>
+            <Typography sx={{ position: 'absolute', top: '60px', fontSize: { sm: '18px', xs: '18px', lg: '36px ', xl: '36px ' }, color: '#fff', zIndex: 1000, width: '100%', textAlign: 'center' }}>360VR Interior</Typography>
             <div id='pano360'>
                 <ReactPhotoSphereViewer mousewheel={false} zoomSpeed={0} onZoomChange={() => { }} touchmoveTwoFingers={false} src="/assets/Sportage-GT-Interior-360.jpg" height={'100vh'} width={"100%"}></ReactPhotoSphereViewer>
 

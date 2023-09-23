@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import CloseIcon from "@mui/icons-material/Close";
+import styles from "./styles/styles.module.css";
 export default function AppSideMenu({
   isSideBarOpen,
   setIsSideBarOpen,
@@ -43,23 +44,14 @@ export default function AppSideMenu({
       role='presentation'
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}>
-      <CloseIcon
-        style={{
-          position: "absolute",
-          top: "0",
-          insetInlineEnd: "30px",
-          color: "#fff",
-          cursor: "pointer !important",
-          width: '48px',
-          height:'48px'
-        }}
-      />
+      <CloseIcon className={styles.closeIcon} />
       <List>
         <ListItem
           style={{ padding: "0px", marginBottom: "30px", marginTop: "68px" }}>
           <Image
             alt='logo'
             src='/assets/logoWhite.png'
+            className={styles.logo}
             width={120}
             height={29}
           />
@@ -80,7 +72,7 @@ export default function AppSideMenu({
               onClick={() => router.push(`${text.link}`)}>
               <ListItemButton style={{ padding: "0px" }}>
                 <ListItemText
-                  primaryTypographyProps={{ fontSize: "26px" }}
+                  primaryTypographyProps={{ fontSize: {sm:'20px',xs:'20px',lg:'26px',xl:'26px'} }}
                   sx={{
                     color: "#fff",
                   }}
@@ -102,7 +94,7 @@ export default function AppSideMenu({
           background: "#05141f",
         },
       }}
-      anchor={i18n?.language=='en'?"left":'right'}
+      anchor={i18n?.language == "en" ? "left" : "right"}
       open={isSideBarOpen}
       onClose={toggleDrawer(false)}
       onOpen={toggleDrawer(true)}>
