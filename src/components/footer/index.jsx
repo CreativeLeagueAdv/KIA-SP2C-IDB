@@ -32,10 +32,10 @@ export default function Footer (params) {
                     <img height={'32px'} width={'32px'} src='/assets/social/Bookmark.svg' />
                     <img height={'32px'} width={'32px'} src='/assets/social/Link.svg' />
                     <img height={'32px'} width={'32px'} src='/assets/social/Email.svg' />
-                    <img height={'32px'} width={'32px'} src='/assets/social/Facebook.svg' />
+                    <img height={'32px'} width={'32px'} src='/assets/social/face.svg' />
                     <img height={'32px'} width={'32px'} src='/assets/social/Instagram.svg' />
                     <img height={'32px'} width={'32px'} src='/assets/social/XLogo.svg' />
-                    <img height={'32px'} width={'32px'} src='/assets/social/LinkedIn.svg' />
+                    <img height={'32px'} width={'32px'} src='/assets/social/in.svg' />
                     <img height={'32px'} width={'32px'} src='/assets/social/Whatsapp.svg' />
 
                 </div>
