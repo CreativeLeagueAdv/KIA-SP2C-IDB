@@ -165,8 +165,8 @@ video::-webkit-media-controls-time-remaining {
 }
 
 .MuiSlider-track {
-  background-color: #bfbfbf;
-  color: red;
+  background-color: #fff;
+  color: #fff;
   border-color: transparent;
 }
 
@@ -202,4 +202,22 @@ video::-webkit-media-controls-time-remaining {
 .MuiSlider-track {
   background-color: #fff;
   border-radius: 0px;
+}
+
+.video-js .vjs-control-bar {
+  background: linear-gradient(transparent, rgba(0, 0, 0, .75)) !important;
+}
+
+.video-js .vjs-picture-in-picture-control {
+  display: none !important;
+}
+
+.video-js .vjs-fullscreen-control {
+  visibility: hidden !important;
+}
+
+.video-js .vjs-volume-panel {
+  position: absolute !important;
+  inset-inline-end: 0px;
+  bottom: 1px;
 }
