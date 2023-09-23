@@ -24,7 +24,7 @@ export default function Footer (params) {
         <div id='footer' className={styles.footerContainer}>
             <div className={styles.imageContainer} >
 
-                <h4 style={{ color: '#fff', fontSize: '18px', marginTop: '80px', marginBottom: '25px' }}>Share The new Seltos Interactive Brochure Experience</h4>
+                <h4 className={styles.text}>Share The new Seltos Interactive Brochure Experience</h4>
 
                 <div className={styles.socialContainer}
                 >

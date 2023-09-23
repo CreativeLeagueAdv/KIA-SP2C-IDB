@@ -12,32 +12,32 @@ const SpecsSection = () => {
             </p>
             <div className={styles.gridList}>
                 <div className={styles.item}>
-                    <img  width={'80px'} height={'80px'} src='/assets/specs/engine.svg' />
+                    <img  className={styles.IconImage} src='/assets/specs/engine.svg' />
                     <Typography className={styles.itemText}>1.4T DCT</Typography>
                 </div>
                 <div className={styles.item}>
-                    <img  width={'80px'} height={'80px'} src='/assets/specs/airBag.svg' />
+                    <img  className={styles.IconImage} src='/assets/specs/airBag.svg' />
 
                      <Typography className={styles.itemText}>Front THORAX+ Curtain Airbag</Typography>
                 </div>
                 <div className={styles.item}>
-                    <img  width={'80px'} height={'80px'} src='/assets/specs/CarWhee.svg' />
+                    <img  className={styles.IconImage} src='/assets/specs/CarWhee.svg' />
 
                      <Typography className={styles.itemText}>Alloy 17” (B-Type)</Typography>
                 </div>
                 <div className={styles.item}>
-                    <img  width={'80px'} height={'80px'} src='/assets/specs/saftey.svg' />
+                    <img  className={styles.IconImage} src='/assets/specs/saftey.svg' />
 
                      <Typography className={styles.itemText}>Keyless Entry</Typography>
                 </div>
                 <div className={styles.item}>
-                    <img  width={'80px'} height={'80px'} src='/assets/specs/aircondition.svg' />
+                    <img  className={styles.IconImage} src='/assets/specs/aircondition.svg' />
 
                      <Typography className={styles.itemText}>Dual-Zone Air
                         Condition</Typography>
                 </div>
                 <div className={styles.item}>
-                    <img  width={'80px'} height={'80px'} src='/assets/specs/verified.png' />
+                    <img className={styles.IconImage} src='/assets/specs/cerify.svg' />
 
                      <Typography className={styles.itemText}>5-Years /
                         150,000 Km</Typography>

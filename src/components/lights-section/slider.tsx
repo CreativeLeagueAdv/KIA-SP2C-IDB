@@ -48,7 +48,7 @@ export default function MainSlider({ children }: { children: ReactNode[] }) {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     style: {
-      height: "100vh",
+      height: {xs:'50vh',sm:'50vh',lg:'100vh',xl:'100vh'},
     },
   };
 

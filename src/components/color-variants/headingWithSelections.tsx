@@ -20,7 +20,7 @@ export default function HeadingWithSelect({
     <FloatingTextSection>
       <div>
         <Typography
-          fontSize={"36px"}
+          fontSize={{ xs: "16px", sm: "16px", lg: "36px", xl: "36px" }}
           fontWeight={"600"}
           sx={{ color: "#fff", textAlign: "center" }}>
           {headingText}
@@ -31,7 +31,7 @@ export default function HeadingWithSelect({
           justifyContent={"center"}
           gap={"50px"}>
           <Typography
-            fontSize={"26px"}
+            fontSize={{ xs: "14px", sm: "14px", lg: "26px", xl: "26px" }}
             fontWeight={"600"}
             onClick={() => {
               setSelectedView(views[0]);
@@ -49,7 +49,7 @@ export default function HeadingWithSelect({
             onClick={() => {
               setSelectedView(views[1]);
             }}
-            fontSize={"26px"}
+            fontSize={{ xs: "14px", sm: "14px", lg: "26px", xl: "26px" }}
             fontWeight={"600"}
             sx={{
               color: "#fff",

@@ -21,7 +21,7 @@ export default function PromoVideo() {
         {showBanner && (
           <div className={styles.promoContainer}>
             <Typography className={styles.text}>The new Seltos</Typography>
-            <img src='/assets/mouseIcon.svg'/>
+            <img src='/assets/mouseIcon.svg' />
           </div>
         )}
         <video
@@ -29,7 +29,8 @@ export default function PromoVideo() {
           id='myVideo'
           width='100%'
           height='90vh'
-          controls={true}
+          preload={"auto"}
+          controls={false}
           autoPlay
           muted>
           <source src={"/assets/SportageIntro-Film.webm"} type='video/webm' />

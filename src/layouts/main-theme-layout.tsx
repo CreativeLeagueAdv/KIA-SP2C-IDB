@@ -7,11 +7,6 @@ export default function Layout({ children }: { children: ReactNode }) {
   const { t, i18n } = useTranslation("common");
   return (
     <>
-      <link rel='prefetch' as='image' href='/assets/TaillightOn.webp' />
-      <link rel='prefetch' as='image' href='/assets/TaillightOff.webp' />
-      <link rel='prefetch' as='image' href='/assets/HeadlightOff.webp' />
-      <link rel='prefetch' as='image' href='/assets/HeadlightOn.webp' />
-      <link rel='preload' as='video' href='/assets/SportageIntro-Film.webm' />
       {colors.map((item) => (
         <link rel='prefetch' as='image' href='/assets/cars/${item}.webp' />
       ))}

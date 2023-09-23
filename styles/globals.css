@@ -36,7 +36,7 @@ a {
   right: 0px !important;
 
   @media only screen and (max-width: 768px) {
-    top: 25% !important;
+    top: 50% !important;
   }
 }
 
@@ -44,7 +44,7 @@ a {
   left: 0px !important;
 
   @media only screen and (max-width: 768px) {
-    top: 25% !important;
+    top: 50% !important;
   }
 }
 
@@ -140,10 +140,16 @@ video::-webkit-media-controls-time-remaining {
 
 .slick-dots {
   bottom: 25px !important;
+  @media only screen and (max-width: 768px) {
+  bottom: 10px !important;   
+ }
 }
 
 .psv-canvas-container canvas {
   height: 100vh !important;
+  @media only screen and (max-width: 768px) {
+      height: 50vh !important;
+    }
 }
 .slick-dots li button:before{
   content:'' !important
