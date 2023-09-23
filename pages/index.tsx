@@ -10,6 +10,7 @@ import LightsSlider from "../src/components/lights-section";
 import Technology from "../src/components/technology";
 import Safety from "../src/components/Saftey";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import WheelController from "../src/components/wheel-control";
 
 function Home() {
   return (
