@@ -1,6 +1,5 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-import MenuIcon from "@mui/icons-material/Menu";
 import { AppBar, Toolbar } from "@mui/material";
 import LanguagePicker from "./languagePicker";
 import styles from "./styles/styles.module.css";
@@ -18,7 +17,7 @@ export default function MainAppBar() {
               setIsSideBarOpen(true);
             }}
             className={styles.menuButton}>
-            <img src='assets/menuIcon.svg' />
+            <img src='assets/MenuIcon.svg' />
           </Button>
           <img
             alt='logo'

@@ -8,7 +8,7 @@ const useStyles = makeStyles({
         padding: '15px 25px',
         fontSize: '16px',
         backgroundColor: '#fff',
-       
+
         '&:hover': {
             backgroundColor: 'transparent',
             borderColor: '#fff',
@@ -44,13 +44,13 @@ export default function Footer (params) {
                         <img src='assets/testDrive.webp' className={styles.image} />
                         <p className={styles.imageText}>Experience The new Seltos For Yourself
                         </p>
-                        <Button startIcon={<img src='assets/wheel.svg' />} variant='outlined' sx={{ color: '#05141F' }} className={classes.button} >Test Drive</Button>
+                        <Button startIcon={<img src='assets/wheel.svg' style={{ marginLeft: '4px !important' }} />} variant='outlined' sx={{ color: '#05141F' }} className={classes.button} >Test Drive</Button>
                     </div>
                     <div className={styles.imageBox}>
                         <img src='assets/locations.webp' className={styles.image} />
                         <p className={styles.imageText} >Find The Nearest Dealer To You
                         </p>
-                        <Button startIcon={<img src='assets/location.svg' />} variant='outlined' className={classes.button} >Locations</Button>
+                        <Button startIcon={<img src='assets/location.svg' style={{ marginLeft: '4px !important' }} />} variant='outlined' className={classes.button} >Locations</Button>
 
                     </div>
 
