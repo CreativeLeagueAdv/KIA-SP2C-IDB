@@ -49,7 +49,7 @@ export default function AppSideMenu({
           style={{ padding: "0px", marginBottom: "30px", marginTop: "68px" }}>
           <img
             alt='logo'
-            src='/assets/logoWhite.png'
+            src='assets/logoWhite.png'
             className={styles.logo}
             width={120}
             height={29}

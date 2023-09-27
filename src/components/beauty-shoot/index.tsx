@@ -24,7 +24,7 @@ export default function BeautyShoot({
         className={styles.mainImage}
         width={100}
         height={100}
-        src={image ? image : `/assets/beauty.webp`}
+        src={image ? image : `assets/beauty.webp`}
       />
       <FloatingTextSection>
         <TextHeading firstLine={textHead1} secondLine={textHead2} />

@@ -21,7 +21,7 @@ export default function PromoVideo() {
         {showBanner && (
           <div className={styles.promoContainer}>
             <Typography className={styles.text}>The new Seltos</Typography>
-            <img src='/assets/mouseIcon.svg' />
+            <img src='assets/mouseIcon.svg' />
           </div>
         )}
         <video
@@ -34,7 +34,7 @@ export default function PromoVideo() {
           playsInline={true}
           // playsinline='true'
           loop={true}>
-          <source src={"/assets/SportageIntro-Film.webm"} type='video/webm' />
+          <source src={"assets/SportageIntro-Film.webm"} type='video/webm' />
         </video>
       </div>
     </div>

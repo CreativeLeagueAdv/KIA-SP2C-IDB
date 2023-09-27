@@ -18,11 +18,11 @@ export default function MainAppBar() {
               setIsSideBarOpen(true);
             }}
             className={styles.menuButton}>
-            <img src='/assets/MenuIcon.svg' />
+            <img src='assets/menuIcon.svg' />
           </Button>
           <img
             alt='logo'
-            src='/assets/logoWhite.png'
+            src='assets/goWhite.png'
             width={142}
             height={33}
             className={styles.logo}

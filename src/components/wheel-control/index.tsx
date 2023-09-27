@@ -153,7 +153,7 @@ export default function WheelController() {
         width={"100%"}
         height={"100%"}
         style={{ objectFit: "cover" }}
-        src={`/assets/wheel/${image}.png`}
+        src={`assets/wheel/${image}.png`}
       />
     </div>
   );

@@ -29,7 +29,7 @@ function Home() {
         <SpecsSection />
         <BeautyShoot
           desc={false}
-          image={"/assets/finalBeauty.webp"}
+          image={"assets/finalBeauty.webp"}
           textHead1={"Speaks your language"}
           textHead2={""}
         />
@@ -40,13 +40,13 @@ function Home() {
 }
 
 export default Home;
-export async function getServerSideProps(context: any) {
-  const language = context?.req?.cookies?.language;
+// export async function getServerSideProps(context: any) {
+//   const language = context?.req?.cookies?.language;
 
-  return {
-    props: {
-      ...(await serverSideTranslations(language ?? "en", ["common"])),
-      // Will be passed to the page component as props
-    },
-  };
-}
+//   return {
+//     props: {
+//       ...(await serverSideTranslations(language ?? "en", ["common"])),
+//       // Will be passed to the page component as props
+//     },
+//   };
+// }

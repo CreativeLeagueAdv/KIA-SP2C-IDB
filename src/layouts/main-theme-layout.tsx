@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <>
       {colors.map((item) => (
-        <link rel='prefetch' as='image' href='/assets/cars/${item}.webp' />
+        <link rel='prefetch' as='image' href='assets/cars/${item}.webp' />
       ))}
       <div
         id='layout'
