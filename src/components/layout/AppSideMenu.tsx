@@ -8,7 +8,6 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
-import Image from "next/image";
 import CloseIcon from "@mui/icons-material/Close";
 import styles from "./styles/styles.module.css";
 export default function AppSideMenu({
@@ -48,7 +47,7 @@ export default function AppSideMenu({
       <List>
         <ListItem
           style={{ padding: "0px", marginBottom: "30px", marginTop: "68px" }}>
-          <Image
+          <img
             alt='logo'
             src='/assets/logoWhite.png'
             className={styles.logo}

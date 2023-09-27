@@ -2,7 +2,6 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu";
 import { AppBar, Toolbar } from "@mui/material";
-import Image from "next/image";
 import LanguagePicker from "./languagePicker";
 import styles from "./styles/styles.module.css";
 import AppSideMenu from "./AppSideMenu";
@@ -21,7 +20,7 @@ export default function MainAppBar() {
             className={styles.menuButton}>
             <img src='/assets/MenuIcon.svg' />
           </Button>
-          <Image
+          <img
             alt='logo'
             src='/assets/logoWhite.png'
             width={142}
