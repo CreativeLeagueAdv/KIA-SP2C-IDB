@@ -44,13 +44,13 @@ export default function Footer (params) {
                         <img src='assets/testDrive.webp' className={styles.image} />
                         <p className={styles.imageText}>Experience The new Seltos For Yourself
                         </p>
-                        <Button startIcon={<img src='assets/wheel.svg' style={{ marginLeft: '4px !important' }} />} variant='outlined' sx={{ color: '#05141F' }} className={classes.button} >Test Drive</Button>
+                        <Button startIcon={<img src='assets/wheel.svg' style={{ marginLeft: '4px ' }} />} variant='outlined' sx={{ color: '#05141F' }} className={classes.button} >Test Drive</Button>
                     </div>
                     <div className={styles.imageBox}>
                         <img src='assets/locations.webp' className={styles.image} />
                         <p className={styles.imageText} >Find The Nearest Dealer To You
                         </p>
-                        <Button startIcon={<img src='assets/location.svg' style={{ marginLeft: '4px !important' }} />} variant='outlined' className={classes.button} >Locations</Button>
+                        <Button startIcon={<img src='assets/location.svg' style={{ marginLeft: '4px ' }} />} variant='outlined' className={classes.button} >Locations</Button>
 
                     </div>
 

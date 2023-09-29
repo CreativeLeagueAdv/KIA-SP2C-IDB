@@ -8,7 +8,6 @@ import AppView from "../src/components/360-images";
 import LightsSlider from "../src/components/lights-section";
 import Technology from "../src/components/technology";
 import Safety from "../src/components/Saftey";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 function Home() {
   return (
     <>

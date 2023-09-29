@@ -10,6 +10,8 @@
     "export": "next export"
   },
   "dependencies": {
+    "360-image-viewer": "^1.0.1",
+    "@3dweb/360javascriptviewer": "^1.8.37",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.8",
@@ -21,6 +23,7 @@
     "@types/react-dom": "18.2.7",
     "@types/react-slick": "^0.23.10",
     "@vidstack/player-react": "^1.6.0",
+    "canvas-fit": "^1.5.0",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
     "i18next": "^23.5.1",
@@ -35,6 +38,7 @@
     "react-share": "^4.4.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^6.0.8",
     "typescript": "5.2.2",
     "video.js": "^8.5.2"
   }

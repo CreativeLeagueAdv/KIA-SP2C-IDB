@@ -21,7 +21,7 @@ export default function MainAppBar() {
           </Button>
           <img
             alt='logo'
-            src='assets/goWhite.png'
+            src='assets/logoWhite.png'
             width={142}
             height={33}
             className={styles.logo}

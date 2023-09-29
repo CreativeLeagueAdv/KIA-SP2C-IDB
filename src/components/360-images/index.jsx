@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useMemo } from "react";
 import dynamic from 'next/dynamic';
 import { Typography } from "@mui/material";
-
+import { useRouter } from "next/router";
 // import { ReactPhotoSphereViewer } from 'react-photo-sphere-viewer';
 const ReactPhotoSphereViewer = dynamic(
     () =>
@@ -13,22 +13,40 @@ const ReactPhotoSphereViewer = dynamic(
     }
 );
 
+
 function AppView () {
-    const pSRef = React.createRef();
-    const handleClick = (data) => {
-        console.log(data);
-    };
+    const router = useRouter()
+
+    useEffect(() => {
+        if (window) {
+            window.CI360.init();
+        }
+    }, [router])
 
     return (
-        <div style={{ position: 'relative' }}>
-            <Typography sx={{ position: 'absolute', top: '60px', fontSize: { sm: '18px', xs: '18px', lg: '36px ', xl: '36px ', }, textShadow: '0px 0px 20px rgba(0, 0, 0, 0.64) !important', color: '#fff', zIndex: 1000, width: '100%', textAlign: 'center' }}>360VR Interior</Typography>
-            <div id='pano360'>
-                <ReactPhotoSphereViewer mousewheel={false} zoomSpeed={0} onZoomChange={() => { }} touchmoveTwoFingers={false} src="assets/rtage-GT-Interior-360.jpg" height={'100vh'} width={"100%"}></ReactPhotoSphereViewer>
-
+        <>
+            <div
+                class="cloudimage-360"
+                style={{ width: '100%', height: '70vh' }}
+                id="gurkha-suv"
+                data-folder="assets/"
+                data-filename-x="Sportage-GT-Interior-360.jpg"
+                data-amount-x="100"
+                data-amount-y="100"
+                data-autoplay={true}
+                data-ratio="2"
+            >
             </div>
-        </div>
+            <script src="https://cdn.scaleflex.it/plugins/js-cloudimage-360-view/latest/js-cloudimage-360-view.min.js"></script>
 
-    );
+
+
+        </>
+
+    )
 }
+
+
+
 
 export default AppView;
