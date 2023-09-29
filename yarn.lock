@@ -2316,6 +2316,13 @@
   dependencies:
     three "^0.156.1"
 
+"@photo-sphere-viewer/core@^5.4.2":
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/@photo-sphere-viewer/core/-/core-5.4.2.tgz#3206e55e89a1691745029aff880cdd0200c09f44"
+  integrity sha512-3qHahV5a7KudQ5jVZWSeqwR7TzP5Kjq7IiXQf1BVLEZvzIaZMA4RAzvzkeidT/g//M0iW+PdLmRK5WpsDtUghw==
+  dependencies:
+    three "^0.156.1"
+
 "@photo-sphere-viewer/cubemap-adapter@5.4.1", "@photo-sphere-viewer/cubemap-adapter@^5.4.0":
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/@photo-sphere-viewer/cubemap-adapter/-/cubemap-adapter-5.4.1.tgz#16a4cf491939c485dc51da6dc1803fa21cc254ae"
@@ -10200,6 +10207,11 @@ pako@~1.0.5:
   version "1.0.11"
   resolved "https://registry.npmjs.org/pako/-/pako-1.0.11.tgz"
   integrity sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==
+
+pannellum@^2.5.6:
+  version "2.5.6"
+  resolved "https://registry.yarnpkg.com/pannellum/-/pannellum-2.5.6.tgz#13bfec43ec272a70b729f20f70f9c34d05b25264"
+  integrity sha512-R4kSPpj36wQPlyIi9ZftxPfVYF11DEbNBATUEI+pkMGZDFYBV5Jxi6tYFVDdmxA2xaTeKZQHMIuIIj7njVSTQQ==
 
 parallel-transform@^1.1.0:
   version "1.2.0"
