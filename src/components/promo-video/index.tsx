@@ -17,11 +17,17 @@ export default function PromoVideo() {
   const { t, i18n } = useTranslation("common");
   return (
     <div id='promo'>
-      <div style={{ position: "relative" }}>
+      <div style={{ position: "relative" }} className={styles.videoClass}>
         {showBanner && (
           <div className={styles.promoContainer}>
             <Typography className={styles.text}>The new Seltos</Typography>
-            <img src='/assets/mouseIcon.svg'/>
+            <img
+              src='assets/mouseIcon.svg'
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                router.push("#shoot");
+              }}
+            />
           </div>
         )}
         <video
@@ -29,10 +35,16 @@ export default function PromoVideo() {
           id='myVideo'
           width='100%'
           height='90vh'
+          muted={true}
+          autoPlay={true}
           controls={true}
-          autoPlay
-          muted>
-          <source src={"/assets/SportageIntro-Film.webm"} type='video/webm' />
+          controlsList={
+            "nofullscreen nodownload noremoteplayback noplaybackrate foobar"
+          }
+          playsInline={true}
+          // playsinline='true'
+          loop={false}>
+          <source src={"assets/SportageIntro-Film.webm"} type='video/webm' />
         </video>
       </div>
     </div>

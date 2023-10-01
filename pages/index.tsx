@@ -5,13 +5,9 @@ import BeautyShoot from "../src/components/beauty-shoot";
 import Footer from "../src/components/footer";
 import SpecsSection from "../src/components/specifications";
 import AppView from "../src/components/360-images";
-import { useTranslation } from "next-i18next";
 import LightsSlider from "../src/components/lights-section";
 import Technology from "../src/components/technology";
 import Safety from "../src/components/Saftey";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import WheelController from "../src/components/wheel-control";
-
 function Home() {
   return (
     <>
@@ -32,7 +28,7 @@ function Home() {
         <SpecsSection />
         <BeautyShoot
           desc={false}
-          image={"/assets/finalBeauty.webp"}
+          image={"assets/finalBeauty.webp"}
           textHead1={"Speaks your language"}
           textHead2={""}
         />
@@ -43,13 +39,13 @@ function Home() {
 }
 
 export default Home;
-export async function getServerSideProps(context: any) {
-  const language = context?.req?.cookies?.language;
+// export async function getServerSideProps(context: any) {
+//   const language = context?.req?.cookies?.language;
 
-  return {
-    props: {
-      ...(await serverSideTranslations(language ?? "en", ["common"])),
-      // Will be passed to the page component as props
-    },
-  };
-}
+//   return {
+//     props: {
+//       ...(await serverSideTranslations(language ?? "en", ["common"])),
+//       // Will be passed to the page component as props
+//     },
+//   };
+// }

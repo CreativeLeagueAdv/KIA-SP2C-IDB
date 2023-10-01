@@ -1,14 +1,15 @@
 import { Stack, Typography } from "@mui/material";
-import styles from './styles.module.css'
+import styles from "./styles.module.css";
 export default function TextHeading({
   firstLine,
   secondLine,
-  secondLineSize='large',
-  
+  secondLineSize = "large",
+  padding,
 }: {
   firstLine: string;
   secondLine: string;
-  secondLineSize?:'small'|'large'
+  secondLineSize?: "small" | "large";
+  padding?: number;
 }) {
   return (
     <Stack
@@ -17,7 +18,8 @@ export default function TextHeading({
       justifyContent={"center"}
       width={"100%"}>
       <Typography
-        className={styles.heading}>
+        className={styles.heading}
+        style={{ paddingTop: padding && `${padding}px` }}>
         {firstLine}
       </Typography>
       <Typography

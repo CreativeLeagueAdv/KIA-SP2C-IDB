@@ -7,9 +7,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   const { t, i18n } = useTranslation("common");
   return (
     <>
-      {colors.map((item) => (
-        <link rel='prefetch' as='image' href='/assets/cars/${item}.webp' />
-      ))}
+   
       <div
         id='layout'
         style={{

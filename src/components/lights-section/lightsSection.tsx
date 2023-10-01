@@ -23,7 +23,7 @@ export default function LightsSection({
           className={styles.mainLightsImage}
           width={100}
           height={100}
-          src={`/assets/lights/tiny${selectedView}light${state ?? "Off"}.webp`}
+          src={`assets/lights/tiny${selectedView}light${state ?? "Off"}.webp`}
         />
         <HeadingWithSelect
           headingText='Exterior Lighting'
@@ -50,9 +50,10 @@ export default function LightsSection({
               OFF
             </Button>
             <FormControlLabel
+              sx={{ margin: "0px !important" }}
               control={
                 <SwitchButton
-                  sx={{ m: 1 }}
+                  sx={{ margin: "0px !important" }}
                   checked={state == "On" ? true : false}
                   onClick={() => {
                     setState(state == "Off" ? "On" : "Off");
@@ -75,7 +76,15 @@ export default function LightsSection({
               ON
             </Button>
           </div>
-          <p style={{ fontSize: "18px", color: "#fff",marginTop:'0px',marginBottom:'0px' }}>Turn lights on/off</p>
+          <p
+            style={{
+              fontSize: "18px",
+              color: "#fff",
+              marginTop: "0px",
+              marginBottom: "0px",
+            }}>
+            Turn lights on/off
+          </p>
         </div>
       </div>
     </>

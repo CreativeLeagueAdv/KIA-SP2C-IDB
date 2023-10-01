@@ -24,12 +24,17 @@ export default function BeautyShoot({
         className={styles.mainImage}
         width={100}
         height={100}
-        src={image ? image : `/assets/beauty.webp`}
+        src={image ? image : `assets/beauty.webp`}
       />
       <FloatingTextSection>
-        <TextHeading firstLine={textHead1} secondLine={textHead2} />
+        <TextHeading
+          padding={60}
+          firstLine={textHead1}
+          secondLine={textHead2}
+        />
         {desc ? (
           <TextDescription
+            padding={60}
             firstLine='The Seltos builds on a solid reputation of sharp, dynamic design, powerful aesthetics, and cutting edge technology.'
             secondLine=' Add in unprecedented levels of connectivity and new, distinctive design elements, and the Seltos sets a new benchmark in'
             thirdLine='small SUV design. Again'

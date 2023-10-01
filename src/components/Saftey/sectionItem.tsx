@@ -32,8 +32,10 @@ export default function SectionItem({
       ) : (
         ""
       )}
-      <p className={styles.headText}>{headLine}</p>
-      <p className={styles.description}>{description}</p>
+      <div className={styles.subContainer}> 
+        <p className={styles.headText}>{headLine}</p>
+        <p className={styles.description}>{description}</p>
+      </div>
     </div>
   );
 }

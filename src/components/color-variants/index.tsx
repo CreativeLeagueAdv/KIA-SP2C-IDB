@@ -20,7 +20,8 @@ export default function ColorVariants() {
           className={styles.mainImage}
           width={100}
           height={100}
-          src={`/assets/cars/${selectedColorImage}.webp`}
+          key={selectedColorImage}
+          src={`assets/cars/${selectedColorImage}.webp`}
         />
         <HeadingWithSelect
           headingText='Exterior Colors'
@@ -50,7 +51,7 @@ export default function ColorVariants() {
                   alt='colorBall'
                   className={styles.colorBall}
                   key={`color-ball-${index}`}
-                  src={`/assets/color-balls/${color}.png`}
+                  src={`assets/color-balls/${color}.png`}
                   onClick={() => {
                     setSelectedColorImage(color);
                   }}
