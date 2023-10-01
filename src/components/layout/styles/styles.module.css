@@ -6,8 +6,8 @@
 }
 
 .menuButton {
-    margin-right: 2rem !important;
-    color: white !important
+    color: white !important;
+    cursor: pointer;
 }
 
 .logo {

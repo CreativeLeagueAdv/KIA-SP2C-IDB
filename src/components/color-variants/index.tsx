@@ -20,6 +20,7 @@ export default function ColorVariants() {
           className={styles.mainImage}
           width={100}
           height={100}
+          key={selectedColorImage}
           src={`assets/cars/${selectedColorImage}.webp`}
         />
         <HeadingWithSelect

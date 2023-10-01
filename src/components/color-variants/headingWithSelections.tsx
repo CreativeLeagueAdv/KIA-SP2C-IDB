@@ -18,10 +18,14 @@ export default function HeadingWithSelect({
 }) {
   return (
     <FloatingTextSection>
-      <div>
+      <div className={styles.head}>
         <Typography
-          fontSize={{ xs: "16px", sm: "16px", lg: "36px", xl: "36px" ,    textShadow: '0px 0px 20px rgba(0, 0, 0, 0.64) !important'
-}}
+          fontSize={{
+            xs: "16px",
+            sm: "16px",
+            lg: "36px",
+            xl: "36px",
+          }}
           fontWeight={"600"}
           sx={{ color: "#fff", textAlign: "center" }}>
           {headingText}

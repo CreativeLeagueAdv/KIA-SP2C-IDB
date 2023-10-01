@@ -72,8 +72,9 @@
 .flexAccordionContainer {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
-    gap: 16px;
+    justify-content: space-between;
+    margin:0px 10px;
+    
 
     @media only screen and (max-width: 768px) {
         flex-direction: column;
@@ -89,7 +90,7 @@
 }
 
 .accordionContainer {
-    width: 49%;
+    width: 48%;
 
     @media only screen and (max-width: 768px) {
         width: 100%;

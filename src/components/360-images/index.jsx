@@ -23,7 +23,7 @@ function AppView () {
 
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
             </head>
-
+          
             <div id="viewer" style={{ width: '100%', height: '100vh' }}>
             </div>
 

@@ -38,6 +38,7 @@
     "react-i18next": "^13.2.2",
     "react-photo-sphere-viewer": "^3.4.0-psv5.4.0",
     "react-share": "^4.4.1",
+    "react-share-social": "^0.1.55",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.0.8",

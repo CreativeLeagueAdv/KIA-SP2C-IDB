@@ -1,24 +1,39 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
 import { AppBar, Toolbar } from "@mui/material";
 import LanguagePicker from "./languagePicker";
 import styles from "./styles/styles.module.css";
 import AppSideMenu from "./AppSideMenu";
+import {useScrollDirection} from './useScrollDirection'
+import { useRouter } from "next/router";
 export default function MainAppBar() {
-    const[isSideBarOpen,setIsSideBarOpen]=React.useState(false)
+  const [isSideBarOpen, setIsSideBarOpen] = React.useState(false);
+  const [scroll, setScroll] = React.useState(0);
+  const [hide, setHide] = React.useState(false);
+  const router = useRouter();
+
+  const scrollDirection = useScrollDirection();
+  React.useEffect(() => {
+    console.log("scrollDirection", scrollDirection);
+  }, [scrollDirection]);
   return (
     <React.Fragment key={"left"}>
       <AppBar
-        style={{ background: "#05141f", position: "static", height: "60px" }}
+        id='bar'
+        style={{
+          background: "#05141f",
+          position:  scrollDirection === "down"?'static':"fixed",
+          height: "60px",
+          // display: trigger? 'none':'block'
+        }}
         position='sticky'>
         <Toolbar variant='regular' className={styles.toolBar}>
-          <Button
+          <div
             onClick={() => {
               setIsSideBarOpen(true);
             }}
             className={styles.menuButton}>
             <img src='assets/MenuIcon.svg' />
-          </Button>
+          </div>
           <img
             alt='logo'
             src='assets/logoWhite.png'

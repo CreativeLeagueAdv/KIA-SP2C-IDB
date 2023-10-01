@@ -5,7 +5,7 @@ export default function AccordionDetailsList() {
   const [expanded, setExpanded] = React.useState<string>("panel1");
 
   const handleChange = (panel: any) => (event: any, isExpanded: boolean) => {
-    setExpanded(isExpanded ? panel : false);
+    setExpanded(isExpanded ? panel : 'panel1');
   };
 
   return (

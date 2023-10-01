@@ -24,16 +24,19 @@ export default function LanguagePicker() {
 
   return (
     <>
-      <Button
+      <div
         id='language-button'
         aria-controls={open ? "language-menu" : undefined}
         aria-haspopup='true'
         aria-expanded={open ? "true" : undefined}
-        variant='outlined'
-        sx={{ color: "white", borderColor: "transparent" }}
+        style={{
+          color: "white",
+          borderColor: "transparent",
+          cursor: "pointer",
+        }}
         onClick={handleClick}>
         <LanguageIcon style={{ width: "30px", height: "30px" }} />
-      </Button>
+      </div>
       <Menu
         id='language-menu'
         anchorEl={anchorEl}
@@ -46,8 +49,24 @@ export default function LanguagePicker() {
             color: "white",
           },
         }}>
-        <MenuItem onClick={() => handleClose("ar")}>العربية</MenuItem>
-        <MenuItem onClick={() => handleClose("en")}>ِEnglish</MenuItem>
+        <MenuItem onClick={() => handleClose("ar")}>
+          <img
+            style={{ marginInlineEnd: "8px" }}
+            src='https://img.icons8.com/color/48/united-arab-emirates.png'
+            width={"20px"}
+            height={"20px"}
+          />
+          العربية
+        </MenuItem>
+        <MenuItem onClick={() => handleClose("en")}>
+          <img
+            src='https://img.icons8.com/color/48/usa.png'
+            width={"20px"}
+            height={"20px"}
+            style={{ marginInlineEnd: "8px" }}
+          />
+          ِEnglish
+        </MenuItem>
       </Menu>
     </>
   );
