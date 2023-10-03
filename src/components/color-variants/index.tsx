@@ -1,33 +1,60 @@
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from "react";
 import styles from "./styles/styles.module.css";
-import FloatingTextSection from "../shared/floating-text";
-import TextHeading from "../shared/text-heading";
-import { Stack, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import HeadingWithSelect from "./headingWithSelections";
+import { useTranslation } from "react-i18next";
 
 export default function ColorVariants() {
-  const [selectedColorImage, setSelectedColorImage] = useState("Black");
-  const colors = ["Blue", "White", "Green", "Silver", "Black"];
-  const [selectedView, setSelectedView] = useState<"oneTone" | "TwoTone">(
+  const [selectedView, setSelectedView] = useState<"oneTone" | "twoTone">(
     "oneTone"
   );
+  const [selectedColorImage, setSelectedColorImage] = useState("oneToneBlue");
+
+  const { t } = useTranslation("common");
+
+  const colorsObject = {
+    oneTone: [
+      "oneToneRed",
+      "oneToneSilver",
+      "oneToneSnowWhite",
+      "oneToneOlive",
+      "oneToneBlue",
+      "oneToneGray",
+      "oneToneWhite",
+      "oneToneBlack",
+    ],
+    twoTone: [
+      "twoToneRed",
+      "twoToneSilverBlack",
+      "twoToneGrayBlack",
+      "twoToneGrayWhite",
+      "twoToneWhiteBlack",
+    ],
+  };
+  useEffect(() => {
+    setSelectedColorImage(
+      colorsObject?.[selectedView]?.[
+        Math.floor(colorsObject?.[selectedView]?.length / 2)
+      ]
+    );
+  }, [selectedView]);
   return (
     <>
-      <div id='colors' className={styles.colorsMainContainer}>
+      <div id='Exteriors' className={styles.colorsMainContainer}>
         <img
           alt='color'
           className={styles.mainImage}
           width={100}
           height={100}
           key={selectedColorImage}
-          src={`assets/cars/${selectedColorImage}.webp`}
+          src={`assets/colors/${selectedColorImage}.webp`}
         />
         <HeadingWithSelect
-          headingText='Exterior Colors'
+          headingText={t("colorVariants")}
           selectedView={selectedView}
           setSelectedView={setSelectedView}
-          views={["oneTone", "TwoTone"]}
+          views={["oneTone", "twoTone"]}
         />
         <div className={styles.colorBalls}>
           <Typography
@@ -38,7 +65,7 @@ export default function ColorVariants() {
             Color Name
           </Typography>
           <div className={styles.colorBallContainer}>
-            {colors.map((color, index) => (
+            {colorsObject?.[selectedView]?.map((color, index) => (
               // eslint-disable--line @next/next/no-img-element
               <div
                 className={
@@ -51,7 +78,7 @@ export default function ColorVariants() {
                   alt='colorBall'
                   className={styles.colorBall}
                   key={`color-ball-${index}`}
-                  src={`assets/color-balls/${color}.png`}
+                  src={`assets/colors/balls/${color}.svg`}
                   onClick={() => {
                     setSelectedColorImage(color);
                   }}

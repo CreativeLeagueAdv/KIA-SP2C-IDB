@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import styles from "./styles/styles.module.css";
 import { useTranslation } from "react-i18next";
 export default function PromoVideo() {
+    const { t, i18n } = useTranslation("common");
+
   const [showBanner, setShowBanner] = useState(false);
   const router = useRouter();
   function handleVideoEnd() {
@@ -14,13 +16,12 @@ export default function PromoVideo() {
       ?.getElementById("myVideo")
       ?.addEventListener("ended", handleVideoEnd, false);
   }, [router.isReady]);
-  const { t, i18n } = useTranslation("common");
   return (
     <div id='promo'>
       <div style={{ position: "relative" }} className={styles.videoClass}>
         {showBanner && (
           <div className={styles.promoContainer}>
-            <Typography className={styles.text}>The new Seltos</Typography>
+            <Typography className={styles.text}>{t("newSeltos")}</Typography>
             <img
               src='assets/mouseIcon.svg'
               style={{ cursor: "pointer" }}

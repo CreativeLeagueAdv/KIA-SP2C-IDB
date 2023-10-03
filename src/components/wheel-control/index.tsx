@@ -2,6 +2,9 @@ import Slider from "@mui/material/Slider";
 import { styled } from "@mui/styles";
 import { useState } from "react";
 import styles from "./styles/styles.module.css";
+import { useTranslation } from "react-i18next";
+import FloatingTextSection from "../shared/floating-text";
+import TextHeading from "../shared/text-heading";
 const iOSBoxShadow =
   "0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)";
 const marks = [
@@ -116,45 +119,53 @@ const IOSSlider = styled(Slider)(({ theme: any }) => ({
   },
 }));
 export default function WheelController() {
-  const [image, setImage] = useState(1);
+  const [image, setImage] = useState(0);
   function valuetext(value: any) {
-    setImage(value / 5);
+    if (value / 5 != 41) setImage(value / 5);
     return `${value}°C`;
   }
+      const { t } = useTranslation("common");
 
   return (
     <div className={styles.container}>
       <div className={styles.controlContainer}>
-        <p className={styles.textTop}>This is a wheel description area</p>
+        <p className={styles.textTop}>{t("wheelDesc")}</p>
         <div className={styles.sliderDiv}>
           <p className={styles.leftPoint}></p>
           <IOSSlider
             style={{
               width: "250px",
             }}
-            defaultValue={50}
+            defaultValue={105}
             getAriaValueText={valuetext}
             onChange={(e) => {
               e.stopPropagation();
               e.preventDefault();
-              console.log("EEE", e);
             }}
             valueLabelDisplay='auto'
             step={5}
             marks={marks}
             min={5}
-            max={100}
+            max={205}
           />
           <p className={styles.rightPoint}></p>
         </div>
-        <p className={styles.textBottom}>Drag to Rotate Wheels</p>
+        <p className={styles.textBottom}>{t("rotateWheel")}</p>
       </div>
+
       <img
         width={"100%"}
         height={"100%"}
         style={{ objectFit: "cover" }}
-        src={`assets/wheel/${image}.png`}
+        src={`assets/wheel/rim_000${image<10?'0':''}${image}.webp`}
       />
+      <FloatingTextSection>
+        <TextHeading
+          padding={60}
+          firstLine={t("wheelVariantions")}
+          secondLine=''
+        />
+      </FloatingTextSection>
     </div>
   );
 }

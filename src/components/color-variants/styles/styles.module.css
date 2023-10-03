@@ -13,7 +13,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    animation: fadeIn 800ms ease-in-out;
+    /* animation: fadeIn 800ms ease-in-out; */
 }
 
 @keyframes fadeIn {
@@ -73,7 +73,7 @@
 
     width: 52px;
     height: 52px;
-    object-fit: none;
+    object-fit: cover;
     border-radius: 38px;
 
     @media only screen and (max-width: 768px) {

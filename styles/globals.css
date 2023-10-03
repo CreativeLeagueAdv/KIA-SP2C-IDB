@@ -280,3 +280,9 @@ h4,
 h5 {
   font-family: KiaSignature !important;
 }
+.psv-container .psv--has-navbar{
+  display: none !important;
+}
+.psv-navbar{
+  display: none !important;
+}

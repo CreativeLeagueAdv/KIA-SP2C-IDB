@@ -37,16 +37,30 @@ export default function AppSideMenu({
         width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
         background: "#05141f",
         marginTop: "20px",
-        marginInlineStart: "50px",
+        marginInlineStart: i18n?.language == "ar" ? "0px" : "50px",
+        marginInlineEnd: i18n?.language == "ar" ? "50px" : "0px",
         position: "relative",
       }}
       role='presentation'
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}>
-      <CloseIcon className={styles.closeIcon} />
+      <CloseIcon
+        className={styles.closeIcon}
+        style={{
+          cursor: "pointer",
+          right: i18n?.language == "ar" ? "unset" : "30px",
+          left: i18n?.language == "ar" ? "30px" : "unset",
+        }}
+      />
       <List>
         <ListItem
-          style={{ padding: "0px", marginBottom: "30px", marginTop: "68px" }}>
+          style={{
+            padding: "0px",
+            marginBottom: "30px",
+            marginTop: "68px",
+            display: "flex",
+            justifyContent: i18n?.language == "ar" ? "end" : "start",
+          }}>
           <img
             alt='logo'
             src='assets/logoWhite.png'
@@ -71,9 +85,17 @@ export default function AppSideMenu({
               onClick={() => router.push(`${text.link}`)}>
               <ListItemButton style={{ padding: "0px" }}>
                 <ListItemText
-                  primaryTypographyProps={{ fontSize: {sm:'20px',xs:'20px',lg:'26px',xl:'26px'} }}
+                  primaryTypographyProps={{
+                    fontSize: {
+                      sm: "20px",
+                      xs: "20px",
+                      lg: "26px",
+                      xl: "26px",
+                    },
+                  }}
                   sx={{
                     color: "#fff",
+                    textAlign: i18n?.language == "ar" ? "end" : "start",
                   }}
                   primary={t(text?.key)}
                 />
