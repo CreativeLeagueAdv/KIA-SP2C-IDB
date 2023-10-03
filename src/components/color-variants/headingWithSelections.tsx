@@ -38,6 +38,21 @@ export default function HeadingWithSelect({
           alignItems={"center"}
           justifyContent={"center"}
           gap={"50px"}>
+            <Typography
+              onClick={() => {
+                setSelectedView(views[1]);
+              }}
+              fontSize={{ xs: "14px", sm: "14px", lg: "26px", xl: "26px" }}
+              fontWeight={"600"}
+              sx={{
+                color: "#fff",
+                cursor: "pointer",
+                textAlign: "center",
+                opacity: selectedView == views[1] ? 1 : 0.68,
+                textDecoration: selectedView == views[1] ? "underline" : "none",
+              }}>
+              {t(views[1])}
+            </Typography>
           <Typography
             fontSize={{ xs: "14px", sm: "14px", lg: "26px", xl: "26px" }}
             fontWeight={"600"}
@@ -52,21 +67,6 @@ export default function HeadingWithSelect({
               textDecoration: selectedView == views[0] ? "underline" : "none",
             }}>
             {t(views[0])}
-          </Typography>
-          <Typography
-            onClick={() => {
-              setSelectedView(views[1]);
-            }}
-            fontSize={{ xs: "14px", sm: "14px", lg: "26px", xl: "26px" }}
-            fontWeight={"600"}
-            sx={{
-              color: "#fff",
-              cursor: "pointer",
-              textAlign: "center",
-              opacity: selectedView == views[1] ? 1 : 0.68,
-              textDecoration: selectedView == views[1] ? "underline" : "none",
-            }}>
-            {t(views[1])}
           </Typography>
         </Stack>
       </div>

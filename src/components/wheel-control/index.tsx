@@ -121,7 +121,6 @@ const IOSSlider = styled(Slider)(({ theme: any }) => ({
 export default function WheelController() {
   const [image, setImage] = useState(0);
   function valuetext(value: any) {
-    console.log("VALUE", value / 5)
     if (value / 5 != 41) setImage(value / 5);
     return `${value}°C`;
   }
