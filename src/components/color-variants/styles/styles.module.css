@@ -99,3 +99,20 @@
     padding-top: 60px;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.00) 100%);
 }
+.vr{
+    width: 100%;
+     height: 100vh;
+    @media only screen and (max-width: 768px) {
+            height: 50vh;
+        }
+}
+.vrText{
+    z-index: 100000;
+     color: #fff;
+     position: absolute;
+     width: 100%;
+     text-align: center;
+     font-size: 36px;
+     padding-top:60px;
+     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.00) 100%);
+}

@@ -1,9 +1,9 @@
-import React, { useEffect, useMemo } from "react";
-import dynamic from 'next/dynamic';
-import { Typography } from "@mui/material";
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { Viewer } from '@photo-sphere-viewer/core';
-
+import styles from '../color-variants/styles/styles.module.css'
+import { Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 function AppView () {
     const { router } = useRouter()
     useEffect(() => {
@@ -16,6 +16,7 @@ function AppView () {
             });
         }
     }, [router])
+    const {t}=useTranslation('common')
     return (
         <>
             <head>
@@ -23,8 +24,8 @@ function AppView () {
 
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
             </head>
-          
-            <div id="viewer" style={{ width: '100%', height: '100vh' }}>
+            <Typography className={styles.vrText}>{t('AppView')}</Typography>
+            <div id="viewer" className={styles.vr}>
             </div>
 
 

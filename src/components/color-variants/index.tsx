@@ -62,7 +62,7 @@ export default function ColorVariants() {
             fontWeight={400}
             mb='10px'
             sx={{ color: "#fff" }}>
-            Color Name
+            {t(selectedColorImage)}
           </Typography>
           <div className={styles.colorBallContainer}>
             {colorsObject?.[selectedView]?.map((color, index) => (
