@@ -11,8 +11,8 @@ export default function AccordionItem({
   expanded,
   handleChange,
   headName,
-    data,
-  image
+  data,
+  image,
 }: {
   name: string;
   expanded: string;
@@ -59,7 +59,11 @@ export default function AccordionItem({
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
-              {image ? <img src={image} width={'100%'} style={{objectFit:'cover'}}/>:   <SpecsList isAccordion={true} header='' list={[]} />}
+        {image ? (
+          <img src={image} width={"100%"} style={{ objectFit: "cover" }} />
+        ) : (
+          <SpecsList isAccordion={true} name={name} />
+        )}
       </AccordionDetails>
     </Accordion>
   );

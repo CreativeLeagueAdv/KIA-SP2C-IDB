@@ -1,46 +1,46 @@
 import { Typography } from '@mui/material'
 import AccordionItem from './components/accordion'
 import AccordionDetailsList from './components/accordionList'
-import SpecsList from './components/specsList'
 import styles from './styles/styles.module.css'
+import { useTranslation } from 'react-i18next'
 const SpecsSection = () => {
+    const { t } = useTranslation('common')
     return (
-        <div id='specifications' className={styles.container}>
+        <div id='Specifications' className={styles.container}>
             <p className={styles.headText}>
-                SPECIFICATIONS
-
+                {t('specs')}
             </p>
             <div className={styles.gridList}>
                 <div className={styles.item}>
-                    <img  className={styles.IconImage} src='assets/specs/engine.svg' />
-                    <Typography className={styles.itemText}>1.4T DCT</Typography>
+                    <img className={styles.IconImage} src='assets/specs/engine.svg' />
+                    <Typography className={styles.itemText}>{t('specsTurbo')}</Typography>
                 </div>
                 <div className={styles.item}>
-                    <img  className={styles.IconImage} src='assets/specs/airBag.svg' />
+                    <img className={styles.IconImage} src='assets/specs/airBag.svg' />
 
-                     <Typography className={styles.itemText}>Front THORAX+ Curtain Airbag</Typography>
+                    <Typography className={styles.itemText}>{t('specsAirBag')}</Typography>
                 </div>
                 <div className={styles.item}>
-                    <img  className={styles.IconImage} src='assets/specs/CarWhee.svg' />
+                    <img className={styles.IconImage} src='assets/specs/CarWhee.svg' />
 
-                     <Typography className={styles.itemText}>Alloy 17” (B-Type)</Typography>
+                    <Typography className={styles.itemText}>{t('specsRim')}</Typography>
                 </div>
                 <div className={styles.item}>
-                    <img  className={styles.IconImage} src='assets/specs/saftey.svg' />
+                    <img className={styles.IconImage} src='assets/specs/saftey.svg' />
 
-                     <Typography className={styles.itemText}>Keyless Entry</Typography>
+                    <Typography className={styles.itemText}>{t('specsKeyLess')}</Typography>
                 </div>
                 <div className={styles.item}>
-                    <img  className={styles.IconImage} src='assets/specs/aircondition.svg' />
+                    <img className={styles.IconImage} src='assets/specs/aircondition.svg' />
 
-                     <Typography className={styles.itemText}>Dual-Zone Air
-                        Condition</Typography>
+                    <Typography className={styles.itemText}>{t('specsAC')}</Typography>
+
                 </div>
                 <div className={styles.item}>
                     <img className={styles.IconImage} src='assets/specs/cerify.svg' />
 
-                     <Typography className={styles.itemText}>5-Years /
-                        150,000 Km</Typography>
+                    <Typography className={styles.itemText}>{t('specsWarranty')}</Typography>
+
                 </div>
 
 
@@ -48,7 +48,7 @@ const SpecsSection = () => {
             <div className={styles.flexAccordionContainer}>
                 <AccordionDetailsList />
                 <div className={styles.accordionContainer}>
-                    <AccordionItem expanded={'panel4'} handleChange={() => { }} headName='DIMENSIONS' name='panel4' image='assets/specs.png' />
+                    <AccordionItem expanded={'panel5'} handleChange={() => { }} headName={t('specsACCHead5')} name='panel5' image='assets/specs.png' />
                 </div>
             </div>
 

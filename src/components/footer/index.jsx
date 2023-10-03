@@ -13,6 +13,7 @@ import {
 } from "react-share";
 import { useRouter } from 'next/router';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 const useStyles = makeStyles({
 
     button: {
@@ -33,24 +34,25 @@ export default function Footer (params) {
     const router = useRouter()
     let base = useMemo(() => {
         if (router.isReady) {
-            if (window)
+            if (typeof window !=='undefined')
                 return window.location.href
         }
     }, [router.isReady])
+    const { t } = useTranslation("common");
 
     return (
 
-        <div id='footer' className={styles.footerContainer}>
+        <div id='Summary' className={styles.footerContainer}>
 
             <div className={styles.imageContainer} >
-                <h4 className={styles.text}>Share The new Seltos Interactive Brochure Experience</h4>
+                <h4 className={styles.text}>{t('shareLinks')}</h4>
                 <div className={styles.socialContainer}
                 >
 
                     <img height={'32px'} width={'32px'} src='assets/social/Bookmark.svg' style={{ cursor: 'pointer' }} onClick={(e) => {
 
                     }} />
-                    <img height={'32px'} width={'32px'} src='assets/social/Link.svg' style={{cursor:'pointer'}} onClick={() => {
+                    <img height={'32px'} width={'32px'} src='assets/social/Link.svg' style={{ cursor: 'pointer' }} onClick={() => {
                         navigator.clipboard.writeText(base);
 
                     }} />
@@ -74,26 +76,11 @@ export default function Footer (params) {
                     </WhatsappShareButton>
 
                 </div>
-                {/* <Stack className={styles.imageBoxContainer} direction={{ xl: 'row', lg: 'row', md: 'row', xs: 'column', sm: 'column' }}>
-                    <div className={styles.imageBox}>
-                        <img src='assets/testDrive.webp' className={styles.image} />
-                        <p className={styles.imageText}>Experience The new Seltos For Yourself
-                        </p>
-                        <Button startIcon={<img src='assets/wheel.svg' style={{ marginLeft: '4px ' }} />} variant='outlined' sx={{ color: '#05141F' }} className={classes.button} >Test Drive</Button>
-                    </div>
-                    <div className={styles.imageBox}>
-                        <img src='assets/locations.webp' className={styles.image} />
-                        <p className={styles.imageText} >Find The Nearest Dealer To You
-                        </p>
-                        <Button startIcon={<img src='assets/location.svg' style={{ marginLeft: '4px ' }} />} variant='outlined' className={classes.button} >Locations</Button>
-
-                    </div>
-
-                </Stack> */}
+               
 
                 <div className={styles.copyRight}>
-                    <img src='assets/logoWhite.png' width={'143px'} height={'33px'} />
-                    <p className={styles.copyText}>COPYRIGHT(C) 2023 KIA CORPORATION. ALL RIGHTS RESERVED.</p>
+                    <img src='assets/logoWhite.png' width={'143px'} height={'43px'} />
+                    <p className={styles.copyText}>{t('copy')}</p>
                 </div>
             </div>
 

@@ -14,6 +14,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           background: "#05141f",
           width: "100vw",
           direction: i18n?.language == "en" ? "ltr" : "rtl",
+        
         }}>
         <MainAppBar />
         {children}

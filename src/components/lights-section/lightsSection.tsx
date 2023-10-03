@@ -2,9 +2,10 @@
 import { useState } from "react";
 import styles from "../color-variants/styles/styles.module.css";
 import controlStyles from "./styles/styles.module.css";
-import { Button, FormControlLabel, Typography } from "@mui/material";
+import { Button, FormControlLabel } from "@mui/material";
 import { SwitchButton } from "./styles";
 import HeadingWithSelect from "../color-variants/headingWithSelections";
+import { useTranslation } from "react-i18next";
 
 export default function LightsSection({
   type,
@@ -12,9 +13,11 @@ export default function LightsSection({
 }: {
   type: "rims" | "lights";
   initial: "Off" | "On";
-}) {
+  }) {
+      const { t } = useTranslation("common");
+
   const [state, setState] = useState<"Off" | "On">("Off");
-  const [selectedView, setSelectedView] = useState<"Tail" | "Head">("Head");
+  const [selectedView, setSelectedView] = useState<"front" | "rear">("front");
   return (
     <>
       <div id='mainColor' className={styles.colorsMainContainer}>
@@ -26,13 +29,13 @@ export default function LightsSection({
           src={`assets/lights/tiny${selectedView}light${state ?? "Off"}.webp`}
         />
         <HeadingWithSelect
-          headingText='Exterior Lighting'
+          headingText={t("lightsHead")}
           selectedView={selectedView}
           setSelectedView={(val) => {
             setSelectedView(val);
             setState("Off");
           }}
-          views={["Tail", "Head"]}
+          views={["front", "rear"]}
         />
         <div className={controlStyles.textHeadContainer}>
           <div className={controlStyles.controlButtons}>
@@ -47,7 +50,7 @@ export default function LightsSection({
               onClick={() => {
                 setState("Off");
               }}>
-              OFF
+              {t("off")}
             </Button>
             <FormControlLabel
               sx={{ margin: "0px !important" }}
@@ -73,7 +76,7 @@ export default function LightsSection({
               onClick={() => {
                 setState("On");
               }}>
-              ON
+              {t("on")}
             </Button>
           </div>
           <p
@@ -83,7 +86,7 @@ export default function LightsSection({
               marginTop: "0px",
               marginBottom: "0px",
             }}>
-            Turn lights on/off
+            {t("turnLight")}
           </p>
         </div>
       </div>

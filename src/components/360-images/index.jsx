@@ -11,7 +11,7 @@ function AppView () {
         if (typeof window !== "undefined") {
             const viewer = new Viewer({
                 container: document.querySelector('#viewer'),
-                panorama: 'assets/Sportage-GT-Interior-360.jpg',
+                panorama: 'assets/360.png',
                 mousewheel: false
             });
         }

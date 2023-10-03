@@ -4,6 +4,7 @@ import styles from "./styles/styles.module.css";
 import FloatingTextSection from "../shared/floating-text";
 import TextHeading from "../shared/text-heading";
 import { Stack, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 export default function HeadingWithSelect({
   views,
@@ -15,7 +16,9 @@ export default function HeadingWithSelect({
   headingText: string;
   setSelectedView: Dispatch<SetStateAction<any>>;
   selectedView: any;
-}) {
+  }) {
+      const { t } = useTranslation("common");
+
   return (
     <FloatingTextSection>
       <div className={styles.head}>
@@ -48,7 +51,7 @@ export default function HeadingWithSelect({
               opacity: selectedView == views[0] ? 1 : 0.68,
               textDecoration: selectedView == views[0] ? "underline" : "none",
             }}>
-            {views[0]}
+            {t(views[0])}
           </Typography>
           <Typography
             onClick={() => {
@@ -63,7 +66,7 @@ export default function HeadingWithSelect({
               opacity: selectedView == views[1] ? 1 : 0.68,
               textDecoration: selectedView == views[1] ? "underline" : "none",
             }}>
-            {views[1]}
+            {t(views[1])}
           </Typography>
         </Stack>
       </div>
