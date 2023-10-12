@@ -18,9 +18,10 @@ export default function SectionItem({
       }}
       className={styles.container}>
       {!isImage ? (
+        
         <video
           className={videoStyles.videoClass}
-          loop={true}
+          loop
           style={{ position: "absolute", top: "0", left: "0" }}
           id='myVideo'
           width='100%'
