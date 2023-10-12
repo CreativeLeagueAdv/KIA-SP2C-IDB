@@ -1,16 +1,36 @@
+import { useEffect, useState } from "react";
 import videoStyles from "../promo-video/styles/styles.module.css";
 import styles from "./styles/styles.module.css";
+import { useRouter } from "next/router";
+
+type source = {
+  type: string;
+  src: string;
+};
 export default function SectionItem({
   src,
   headLine,
   description,
   isImage,
 }: {
-  src: string;
+  src: string | source;
   headLine: string;
   description: string;
   isImage: boolean;
 }) {
+  const { isReady } = useRouter();
+  const [source, setSource] = useState({
+    type: "webm",
+  });
+  useEffect(() => {
+    if (isReady) {
+      if (window && window.innerWidth <= 768) {
+        setSource({
+          type: "mp4",
+        });
+      }
+    }
+  }, [isReady]);
   return (
     <div
       style={{
@@ -18,7 +38,6 @@ export default function SectionItem({
       }}
       className={styles.container}>
       {!isImage ? (
-        
         <video
           className={videoStyles.videoClass}
           loop
@@ -28,7 +47,10 @@ export default function SectionItem({
           height='100vh'
           autoPlay
           muted>
-          <source src={src} type='video/webm' />
+          <source
+            src={(src as source)?.src}
+            type={`video/${(src as source)?.type}`}
+          />
         </video>
       ) : (
         ""
