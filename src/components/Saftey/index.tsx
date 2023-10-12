@@ -1,17 +1,33 @@
 import { useTranslation } from "react-i18next";
 import MainSlider from "../lights-section/slider";
 import SectionItem from "./sectionItem";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Safety() {
   const { t, i18n } = useTranslation("common");
-
+  const { isReady }=useRouter();
+  const [source, setSource] = useState({
+    type: "webm",
+    src: "assets/safety/safteyVideo.webm",
+  });
+  useEffect(() => {
+    if (isReady) {
+      if (window && window.innerWidth <= 768) {
+        setSource({
+          type: "mp4",
+          src: "assets/safety/safteyVideo.mp4",
+        });
+      }
+    }
+  }, [isReady]);
   return (
     <div id='Safety'>
       <MainSlider>
         <SectionItem
           headLine={t("safteySlider1Head")}
           description={t("safteySlider1Desc")}
-          src='assets/safety/safteyVideo.webm'
+          src={source}
           isImage={false}
         />
         <SectionItem

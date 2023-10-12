@@ -5,7 +5,21 @@ import styles from "./styles/styles.module.css";
 import { useTranslation } from "react-i18next";
 export default function PromoVideo() {
   const { t, i18n } = useTranslation("common");
-
+  const { isReady } = useRouter();
+  const [source, setSource] = useState({
+    type: "webm",
+    src: "assets/SportageIntro-Film.webm",
+  });
+  useEffect(() => {
+    if (isReady) {
+      if (window && window.innerWidth <= 768) {
+        setSource({
+          type: "mp4",
+          src: "assets/SportageIntro-Film.mp4",
+        });
+      }
+    }
+  }, [isReady]);
   const [showBanner, setShowBanner] = useState(false);
   const router = useRouter();
   function handleVideoEnd() {
@@ -45,7 +59,7 @@ export default function PromoVideo() {
           playsInline
           // playsinline='true'
         >
-          <source src={"assets/SportageIntro-Film.webm"} type='video/webm' />
+          <source src={source?.src} type={`video/${source?.type}`} />
         </video>
       </div>
     </div>
