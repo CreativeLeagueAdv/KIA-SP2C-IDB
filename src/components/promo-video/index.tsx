@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "./styles/styles.module.css";
 import { useTranslation } from "react-i18next";
 export default function PromoVideo() {
-    const { t, i18n } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
 
   const [showBanner, setShowBanner] = useState(false);
   const router = useRouter();
@@ -36,15 +36,15 @@ export default function PromoVideo() {
           id='myVideo'
           width='100%'
           height='90vh'
-          muted={true}
-          autoPlay={true}
-          controls={true}
+          muted
+          autoPlay
+          controls
           controlsList={
             "nofullscreen nodownload noremoteplayback noplaybackrate foobar"
           }
-          playsInline={true}
+          playsInline
           // playsinline='true'
-          loop={false}>
+        >
           <source src={"assets/SportageIntro-Film.webm"} type='video/webm' />
         </video>
       </div>
