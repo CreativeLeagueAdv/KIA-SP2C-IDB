@@ -11,7 +11,7 @@ export default function Safety() {
         <SectionItem
           headLine={t("safteySlider1Head")}
           description={t("safteySlider1Desc")}
-          src='assets/safety/safteyVideo.mp4'
+          src='assets/safety/safteyVideo.webm'
           isImage={false}
         />
         <SectionItem

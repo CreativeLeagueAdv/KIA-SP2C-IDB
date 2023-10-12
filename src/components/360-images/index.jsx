@@ -11,7 +11,7 @@ function AppView () {
         if (typeof window !== "undefined") {
             const viewer = new Viewer({
                 container: document.querySelector('#viewer'),
-                panorama: 'assets/360.png',
+                panorama: 'assets/360.webp',
                 mousewheel: false
             });
         }
