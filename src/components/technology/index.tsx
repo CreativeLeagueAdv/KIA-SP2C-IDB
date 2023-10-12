@@ -13,19 +13,19 @@ export default function Technology({ isInterior }: { isInterior?: boolean }) {
             key={1}
             headLine={t("techSlider1Head")}
             description={t("techSlider1Desc")}
-            image='assets/tech/screen.png'
+            image='assets/tech/screen.webp'
           />
           <SectionItem
             key={2}
             headLine={t("techSlider2Head")}
             description={t("techSlider2Desc")}
-            image='assets/tech/sunroof.png'
+            image='assets/tech/sunroof.webp'
           />
           <SectionItem
             key={3}
             headLine={t("techSlider3Head")}
             description={t("techSlider3Desc")}
-            image='assets/tech/cassete.png'
+            image='assets/tech/cassete.webp'
           />
         </MainSlider>
       ) : (
@@ -34,13 +34,13 @@ export default function Technology({ isInterior }: { isInterior?: boolean }) {
             key={1}
             headLine={t("engineSlider1Head")}
             description={t("engineSlider1Desc")}
-            image='assets/tech/tech4.webp'
+            image='assets/tech/tech2.webp'
           />
           <SectionItem
             key={2}
             headLine={t("engineSlider2Head")}
             description={t("engineSlider2Desc")}
-            image='assets/tech/tech2.webp'
+            image='assets/tech/tech4.webp'
           />
         </MainSlider>
       )}
