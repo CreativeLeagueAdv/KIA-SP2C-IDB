@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
 import videoStyles from "../promo-video/styles/styles.module.css";
 import styles from "./styles/styles.module.css";
-import { useRouter } from "next/router";
 
 type source = {
   type: string;
@@ -18,19 +16,8 @@ export default function SectionItem({
   description: string;
   isImage: boolean;
 }) {
-  const { isReady } = useRouter();
-  const [source, setSource] = useState({
-    type: "webm",
-  });
-  useEffect(() => {
-    if (isReady) {
-      if (window && window.innerWidth <= 768) {
-        setSource({
-          type: "mp4",
-        });
-      }
-    }
-  }, [isReady]);
+ 
+
   return (
     <div
       style={{
@@ -45,8 +32,9 @@ export default function SectionItem({
           id='myVideo'
           width='100%'
           height='100vh'
-          autoPlay
-          muted>
+          autoPlay={true}
+          muted
+          playsInline>
           <source
             src={(src as source)?.src}
             type={`video/${(src as source)?.type}`}
