@@ -29,7 +29,7 @@ a {
 
 .view-container {
   @media only screen and (max-width: 768px) {
-    height: 60vh !important;
+    height: 45vh !important;
   }
 }
 
@@ -155,7 +155,7 @@ video::-webkit-media-controls-time-remaining {
   height: 100vh !important;
 
   @media only screen and (max-width: 768px) {
-    height: 60vh !important;
+    height: 45vh !important;
   }
 }
 

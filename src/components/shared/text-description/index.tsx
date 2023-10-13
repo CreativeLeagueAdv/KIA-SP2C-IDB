@@ -37,8 +37,15 @@ export default function TextDescription({
               md: "50px",
               lg: "120px",
               xl: "120px",
-              xs: "30px",
-              sm: "30px",
+              xs: "0px",
+              sm: "0px",
+            },
+            marginBottom: {
+              md: "unset",
+              lg: "unset",
+              xl: "unset",
+              xs: "10px",
+              sm: "10px",
             },
           }}>
           {text}

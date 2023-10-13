@@ -23,8 +23,9 @@
 
     @media only screen and (max-width: 768px) 
     {
-        height: 60vh !important;
+        height: 45vh !important;
         width: 98%;
+        padding-bottom: 15px;
         
     }
 
@@ -40,7 +41,7 @@
         @media only screen and (max-width: 768px) {
             font-size: 24px;
             width: 100%;
-            margin-top: 20px;
+            margin-top: 0px;
             margin-left: 20px;
             text-align: center;
         }
@@ -54,7 +55,7 @@
     object-fit: cover;
 
     @media only screen and (max-width: 768px) {
-        height: 60vh;
+        height: 45vh;
     }
 
 
