@@ -38,7 +38,13 @@ function SampleNextArrow(props: any) {
     />
   );
 }
-export default function MainSlider({ children }: { children: ReactNode[] }) {
+export default function MainSlider({
+  children,
+  mobileHeight,
+}: {
+  children: ReactNode[];
+  mobileHeight?:boolean
+}) {
   const settings = {
     dots: true,
     infinite: true,
@@ -50,13 +56,15 @@ export default function MainSlider({ children }: { children: ReactNode[] }) {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     style: {
-      height: { xs: "45vh", sm: "45vh", lg: "100vh", xl: "100vh" },
+      height: { xs: mobileHeight?'30vh':"300px", sm: mobileHeight?'30vh':"300px", lg: "100vh", xl: "100vh" },
     },
   };
 
   return (
     <>
-      <div id='lights' className={styles.container}>
+      <div
+        id='lights'
+        className={mobileHeight ? styles.secondContainer : styles.container}>
         <Slider {...settings}>{children.map((item) => item)}</Slider>
       </div>
     </>

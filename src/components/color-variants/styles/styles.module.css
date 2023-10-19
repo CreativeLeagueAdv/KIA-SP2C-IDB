@@ -4,7 +4,7 @@
     position: relative;
 
     @media only screen and (max-width: 768px) {
-        height: 45vh;
+        height: 350px;
         width: 100%;
     }
 }
@@ -34,7 +34,15 @@
 
 }
 
+.selectedText {
+    @media only screen and (max-width: 768px) {
+        margin-bottom: 2px;
+    }
+}
+
+
 .colorBalls {
+
     position: absolute;
     bottom: 0%;
     width: 100%;
@@ -44,9 +52,10 @@
     align-items: center;
     padding-bottom: 60px;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.75) 100%);
+
     @media only screen and (max-width: 768px) {
-           padding-bottom: 30px;
-        }
+        padding-bottom: 10px;
+    }
 }
 
 .colorBallContainer {
@@ -60,7 +69,7 @@
     gap: 10px;
 
     @media only screen and (max-width: 768px) {
-        gap: 12px;
+        gap: 10px;
         flex-wrap: wrap;
         margin: '0px 15px'
     }
@@ -91,6 +100,11 @@
     padding-bottom: 20px;
     border-bottom: 5px solid #fff;
 
+    @media only screen and (max-width: 768px) {
+        border-bottom: 2px solid #fff;
+        padding-bottom: 5px;
+    }
+
 }
 
 .colorBall:hover {
@@ -100,28 +114,33 @@
 .head {
     padding-top: 60px;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.00) 100%);
-@media only screen and (max-width: 768px) {
-        padding-top: 30px;
-    }
-}
-.vr{
-    width: 100%;
-     height: 100vh;
+
     @media only screen and (max-width: 768px) {
-            height: 45vh;
-        }
+        padding-top: 15px;
+    }
 }
-.vrText{
+
+.vr {
+    width: 100%;
+    height: 100vh;
+
+    @media only screen and (max-width: 768px) {
+        height: 320px !important;
+    }
+}
+
+.vrText {
     z-index: 100000 !important;
-     color: #fff !important;
-     position: absolute !important;
-     width: 100% !important;
-     text-align: center !important;
-     font-size: 36px !important;
-     padding-top:60px !important;
-     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.00) 100%);
-@media only screen and (max-width: 768px) {
+    color: #fff !important;
+    position: absolute !important;
+    width: 100% !important;
+    text-align: center !important;
+    font-size: 36px !important;
+    padding-top: 60px !important;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.00) 100%);
+
+    @media only screen and (max-width: 768px) {
         font-size: 18px !important;
-        padding-top: 30px !important;
+        padding-top: 15px !important;
     }
-    }
+}

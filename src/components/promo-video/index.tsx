@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from "./styles/styles.module.css";
 import { useTranslation } from "react-i18next";
+import {VideoPlayer} from "./VideoJs";
 export default function PromoVideo() {
   const { t, i18n } = useTranslation("common");
   const { isReady } = useRouter();
@@ -31,12 +32,13 @@ export default function PromoVideo() {
       ?.addEventListener("ended", handleVideoEnd, false);
   }, [router.isReady]);
   return (
-    <div id='promo'>
+    <div id='promo' className="videoContainer">
       <div style={{ position: "relative" }} className={styles.videoClass}>
         {showBanner && (
           <div className={styles.promoContainer}>
             <Typography className={styles.text}>{t("newSeltos")}</Typography>
             <img
+              className={styles.mouse}
               src='assets/mouseIcon.svg'
               style={{ cursor: "pointer" }}
               onClick={() => {
@@ -45,22 +47,8 @@ export default function PromoVideo() {
             />
           </div>
         )}
-        <video
-          className={styles.videoClass}
-          id='myVideo'
-          width='100%'
-          height='90vh'
-          muted
-          autoPlay
-          controls
-          controlsList={
-            "nofullscreen nodownload noremoteplayback noplaybackrate foobar"
-          }
-          playsInline
-          // playsinline='true'
-        >
-          <source src={source?.src} type={`video/${source?.type}`} />
-        </video>
+        <VideoPlayer src={source?.src} />
+      
       </div>
     </div>
   );

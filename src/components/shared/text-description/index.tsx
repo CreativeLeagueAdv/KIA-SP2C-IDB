@@ -27,8 +27,8 @@ export default function TextDescription({
             md: "1.5rem",
             lg: "1.5rem",
             xl: "1.5rem",
-            xs: "12px",
-            sm: "12px",
+            xs: "10px",
+            sm: "10px",
           }}
           fontWeight={"400"}
           color={"white"}
@@ -57,8 +57,8 @@ export default function TextDescription({
               md: "1.5rem",
               lg: "1.5rem",
               xl: "1.5rem",
-              xs: "12px",
-              sm: "12px",
+              xs: "10px",
+              sm: "10px",
             }}
             fontWeight={"400"}
             color={"white"}>
@@ -69,8 +69,8 @@ export default function TextDescription({
               md: "1.5rem",
               lg: "1.5rem",
               xl: "1.5rem",
-              xs: "12px",
-              sm: "12px",
+              xs: "10px",
+              sm: "10px",
             }}
             fontWeight={"400"}
             color={"white"}>
@@ -81,8 +81,8 @@ export default function TextDescription({
               md: "1.5rem",
               lg: "1.5rem",
               xl: "1.5rem",
-              xs: "12px",
-              sm: "12px",
+              xs: "10px",
+              sm: "10px",
             }}
             fontWeight={"400"}
             lineHeight={1}

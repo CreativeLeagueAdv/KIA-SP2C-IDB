@@ -16,8 +16,8 @@ export default function HeadingWithSelect({
   headingText: string;
   setSelectedView: Dispatch<SetStateAction<any>>;
   selectedView: any;
-  }) {
-      const { t } = useTranslation("common");
+}) {
+  const { t } = useTranslation("common");
 
   return (
     <FloatingTextSection>
@@ -30,7 +30,11 @@ export default function HeadingWithSelect({
             xl: "36px",
           }}
           fontWeight={"600"}
-          sx={{ color: "#fff", textAlign: "center" }}>
+          sx={{
+            color: "#fff",
+            textAlign: "center",
+            fontFamily: "KiaSignaturebold !important",
+          }}>
           {headingText}
         </Typography>
         <Stack
@@ -38,23 +42,23 @@ export default function HeadingWithSelect({
           alignItems={"center"}
           justifyContent={"center"}
           gap={"50px"}>
-            <Typography
-              onClick={() => {
-                setSelectedView(views[1]);
-              }}
-              fontSize={{ xs: "14px", sm: "14px", lg: "26px", xl: "26px" }}
-              fontWeight={"600"}
-              sx={{
-                color: "#fff",
-                cursor: "pointer",
-                textAlign: "center",
-                opacity: selectedView == views[1] ? 1 : 0.68,
-                textDecoration: selectedView == views[1] ? "underline" : "none",
-              }}>
-              {t(views[1])}
-            </Typography>
           <Typography
-            fontSize={{ xs: "14px", sm: "14px", lg: "26px", xl: "26px" }}
+            onClick={() => {
+              setSelectedView(views[1]);
+            }}
+            fontSize={{ xs: "10px", sm: "10px", lg: "26px", xl: "26px" }}
+            fontWeight={"600"}
+            sx={{
+              color: "#fff",
+              cursor: "pointer",
+              textAlign: "center",
+              opacity: selectedView == views[1] ? 1 : 0.68,
+              textDecoration: selectedView == views[1] ? "underline" : "none",
+            }}>
+            {t(views[1])}
+          </Typography>
+          <Typography
+            fontSize={{ xs: "10px", sm: "10px", lg: "26px", xl: "26px" }}
             fontWeight={"600"}
             onClick={() => {
               setSelectedView(views[0]);
