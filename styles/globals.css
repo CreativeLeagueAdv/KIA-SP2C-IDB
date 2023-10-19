@@ -29,7 +29,7 @@ a {
 
 .view-container {
   @media only screen and (max-width: 768px) {
-    height: 45vh !important;
+    height: 230px !important;
   }
 }
 
@@ -38,6 +38,8 @@ a {
 
   @media only screen and (max-width: 768px) {
     top: 50% !important;
+    width: 20px  !important;
+    height: 20px !important;
   }
 }
 
@@ -46,6 +48,8 @@ a {
 
   @media only screen and (max-width: 768px) {
     top: 50% !important;
+    width: 20px !important;
+      height: 20px !important;
   }
 }
 
@@ -155,7 +159,7 @@ video::-webkit-media-controls-time-remaining {
   height: 100vh !important;
 
   @media only screen and (max-width: 768px) {
-    height: 45vh !important;
+    height: 230px !important;
   }
 }
 
@@ -261,16 +265,34 @@ video::-internal-media-controls-button-panel {
   font-family: 'KiaSignature';
   src: url('../public/assets/kiaSegniture/KiaSignatureLight.woff');
   src: url('../public/assets/kiaSegniture/KiaSignatureRegular.woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KiaSignaturebold';
+  src: url('../public/assets/kiaSegniture/KiaSignatureBold.woff');
+  src: url('../public/assets/kiaSegniture/KiaSignatureBold.woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KiaSignatureregular';
+  src: url('../public/assets/kiaSegniture/KiaSignatureRegular.woff');
+  src: url('../public/assets/kiaSegniture/KiaSignatureRegular.woff');
   font-weight: 400;
   font-style: normal;
 }
 
 body {
-  font-family: KiaSignature !important;
+  font-family: KiaSignatureregular !important;
+  font-weight: 400 !important;
 }
 
 p {
-  font-family: KiaSignature !important;
+  font-family: KiaSignatureregular !important;
+  font-weight: 400 !important;
 }
 
 h1,
@@ -278,11 +300,90 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: KiaSignature !important;
+  font-family: KiaSignaturebold !important;
 }
-.psv-container .psv--has-navbar{
+
+.psv-container .psv--has-navbar {
   display: none !important;
 }
-.psv-navbar{
+
+.psv-navbar {
   display: none !important;
+}
+
+
+.play-control {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  height: 35px !important;
+  padding: 5px !important;
+  position: absolute !important;
+  bottom: 24px !important;
+
+  @media only screen and (max-width: 768px) {
+    bottom: 0px !important;
+    height: 19px !important;
+    display: flex!important;
+    padding: 0px !important;
+    align-items: center!important;
+    justify-content: center!important;
+  }
+
+}
+
+.video-react .video-react-control {
+  border: 1px solid #ffffff !important;
+  padding: 5px !important;
+  display: flex !important;
+  align-items: center !important;
+  align-content: center !important;
+  justify-content: center !important;
+  border-radius: 50px !important;
+@media only screen and (max-width: 768px) {
+  padding: 0px !important;
+  border: none !important;
+  margin-top: -3px !important;
+  }
+ 
+
+}
+
+.video-react-replay-contro {
+  background-color: gray !important;
+}
+
+.replay {
+  display: flex !important;
+  align-items: center !important;
+  align-content: center !important;
+  justify-content: center !important;
+}
+
+.replay::before {
+  content: '↻' !important;
+  font-size: 1.6rem !important;
+  text-align: center !important;
+  margin-top: -15px !important;
+  
+
+}
+
+.video-react .video-react-progress-control {
+  border: none !important;
+  border: 0px !important;
+}
+
+.play::before {
+  font-size: 1.4rem !important;
+  text-align: center !important;
+  margin-top: -7px !important;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1rem !important
+  }
+}
+
+.videoContainer {
+  @media only screen and (max-width: 768px) {
+    height: 230px !important;
+  }
 }

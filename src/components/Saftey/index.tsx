@@ -23,7 +23,7 @@ export default function Safety() {
   }, [isReady]);
   return (
     <div id='Safety'>
-      <MainSlider>
+      <MainSlider mobileHeight={true}>
         <SectionItem
           headLine={t("safteySlider1Head")}
           description={t("safteySlider1Desc")}

@@ -14,6 +14,7 @@ export default function SectionItem({
       key={headLine}
       style={{
         backgroundImage: `url(${image})`,
+        backgroundPosition:'center',
       }}
       className={styles.container}>
       <div className={styles.subContainer}>

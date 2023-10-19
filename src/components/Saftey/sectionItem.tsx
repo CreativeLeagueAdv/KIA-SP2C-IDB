@@ -16,8 +16,6 @@ export default function SectionItem({
   description: string;
   isImage: boolean;
 }) {
- 
-
   return (
     <div
       style={{
@@ -26,10 +24,13 @@ export default function SectionItem({
       className={styles.container}>
       {!isImage ? (
         <video
-          className={videoStyles.videoClass}
+          className={
+            isImage
+              ? videoStyles.videoClass
+              : videoStyles?.mobileHeightVideoClass
+          }
           loop
           style={{ position: "absolute", top: "0", left: "0" }}
-          id='myVideo'
           width='100%'
           height='100vh'
           autoPlay={true}

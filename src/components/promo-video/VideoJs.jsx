@@ -1,55 +1,27 @@
 import React from 'react';
-import videojs from 'video.js';
-import 'video.js/dist/video-js.css';
+import { Player, ControlBar, PlayToggle, ReplayControl, ProgressControl } from 'video-react';
 
-export const VideoJS = (props) => {
-    const videoRef = React.useRef(null);
-    const playerRef = React.useRef(null);
-    const { options, onReady } = props;
-
-    React.useEffect(() => {
-
-        // Make sure Video.js player is only initialized once
-        if (!playerRef.current)
-        {
-            // The Video.js player needs to be _inside_ the component el for React 18 Strict Mode. 
-            const videoElement = document.createElement("video-js");
-
-            videoElement.classList.add('vjs-big-play-centered');
-            videoRef.current.appendChild(videoElement);
-
-            const player = playerRef.current = videojs(videoElement, options, () => {
-                videojs.log('player is ready');
-                onReady && onReady(player);
-            });
-
-            // You could update an existing player in the `else` block here
-            // on prop change, for example:
-        } else {
-            const player = playerRef.current;
-            console.log("PL",player?.duration)
-            player.autoplay(true);
-            player.src(options.sources);
-        }
-    }, [options, videoRef]);
-
-    // Dispose the Video.js player when the functional component unmounts
-    React.useEffect(() => {
-        const player = playerRef.current;
-
-        return () => {
-            if (player && !player.isDisposed()) {
-                player.dispose();
-                playerRef.current = null;
-            }
-        };
-    }, [playerRef]);
-
+export const VideoPlayer = ({ src }) => {
     return (
-        <div data-vjs-player>
-            <div ref={videoRef} />
+        <div style={{ position: 'relative' }}>
+            <link
+                rel="stylesheet"
+                href="https://video-react.github.io/assets/video-react.css"
+            />
+            <Player
+                videoId='myVideo'
+                src={src}
+                autoPlay={true}
+                muted={true}
+                height={'100%'}
+            >
+                <ControlBar autoHide={true} disableDefaultControls={true} className={'play-control'}>
+                    <PlayToggle className={'play'} />
+                    <ProgressControl />
+                    <ReplayControl seconds={30} order={2.3} className={'replay'} />
+
+                </ControlBar>
+            </Player>
         </div>
     );
-}
-
-export default VideoJS;
+};
