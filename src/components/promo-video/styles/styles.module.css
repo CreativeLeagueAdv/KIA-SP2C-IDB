@@ -20,7 +20,8 @@
     align-items: center;
     z-index: 1000;
     padding-top: 80px;
-    @media only screen and (max-width: 768px){
+
+    @media only screen and (max-width: 768px) {
         padding-top: 60px;
     }
 
@@ -28,7 +29,8 @@
         height: 26vh !important;
         width: 98%;
         padding-bottom: 20px;
-        .mouse{
+
+        .mouse {
             height: 20px !important;
             width: 20px !important;
         }
