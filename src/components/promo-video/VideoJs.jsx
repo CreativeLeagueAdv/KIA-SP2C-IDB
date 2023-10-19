@@ -1,9 +1,9 @@
 import React from 'react';
 import { Player, ControlBar, PlayToggle, ReplayControl, ProgressControl } from 'video-react';
-
+import styles from './styles/styles.module.css'
 export const VideoPlayer = ({ src }) => {
     return (
-        <div style={{ position: 'relative' }}>
+        <div className={'videoWrapper'} style={{ position: 'relative' }}>
             <link
                 rel="stylesheet"
                 href="https://video-react.github.io/assets/video-react.css"
