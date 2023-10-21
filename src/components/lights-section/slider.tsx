@@ -56,7 +56,7 @@ export default function MainSlider({
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     style: {
-      height: { xs: mobileHeight?'30vh':"300px", sm: mobileHeight?'30vh':"300px", lg: "100vh", xl: "100vh" },
+      height: { xs:"300px", sm:"300px", lg: "100vh", xl: "100vh" },
     },
   };
 

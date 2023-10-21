@@ -11939,6 +11939,11 @@ react-transition-group@^4.4.0, react-transition-group@^4.4.5:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+react-video-markers@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/react-video-markers/-/react-video-markers-1.1.4.tgz#ca853276054954fdb18af73eb5c3f5d5b06b43cd"
+  integrity sha512-XFuhuEFpias+kO/ha5M5nigX31WpkmV/3C4tzOLoEvZpCkRciz8YgVCZU9uBVkpPASGMkBNMDekk1hlajsUPrQ==
+
 react@18.2.0, react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"

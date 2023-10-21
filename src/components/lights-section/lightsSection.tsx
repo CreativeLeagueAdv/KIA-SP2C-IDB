@@ -13,8 +13,8 @@ export default function LightsSection({
 }: {
   type: "rims" | "lights";
   initial: "Off" | "On";
-  }) {
-      const { t } = useTranslation("common");
+}) {
+  const { t } = useTranslation("common");
 
   const [state, setState] = useState<"Off" | "On">("Off");
   const [selectedView, setSelectedView] = useState<"front" | "rear">("front");
@@ -79,15 +79,7 @@ export default function LightsSection({
               {t("on")}
             </Button>
           </div>
-          <p
-            style={{
-              fontSize: "18px",
-              color: "#fff",
-              marginTop: "0px",
-              marginBottom: "0px",
-            }}>
-            {t("turnLight")}
-          </p>
+          <p className={styles.lightsTurn}>{t("turnLight")}</p>
         </div>
       </div>
     </>

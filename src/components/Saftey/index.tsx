@@ -23,26 +23,30 @@ export default function Safety() {
   }, [isReady]);
   return (
     <div id='Safety'>
-      <MainSlider mobileHeight={true}>
+      <MainSlider  mobileHeight={true}>
         <SectionItem
+          index={0}
           headLine={t("safteySlider1Head")}
           description={t("safteySlider1Desc")}
           src={source}
           isImage={false}
         />
         <SectionItem
+          index={1}
           headLine={t("safteySlider2Head")}
           description={t("safteySlider2Desc")}
           src='assets/safety/tinyVideo.webp'
           isImage={true}
         />
         <SectionItem
+          index={2}
           headLine={t("safteySlider3Head")}
           description={t("safteySlider3Desc")}
           src='assets/safety/tinyVideo2.webp'
           isImage={true}
         />
         <SectionItem
+          index={3}
           headLine={t("safteySlider4Head")}
           description={t("safteySlider4Desc")}
           src='assets/safety/tinyVideo3.webp'

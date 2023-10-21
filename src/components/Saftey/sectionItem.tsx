@@ -10,16 +10,19 @@ export default function SectionItem({
   headLine,
   description,
   isImage,
+  index,
 }: {
   src: string | source;
   headLine: string;
   description: string;
   isImage: boolean;
+  index: Number
 }) {
   return (
     <div
       style={{
         backgroundImage: isImage ? `url(${src})` : "",
+        backgroundPosition:index==2?'center':index==3?'right':'unset'
       }}
       className={styles.container}>
       {!isImage ? (

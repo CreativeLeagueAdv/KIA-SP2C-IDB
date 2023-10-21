@@ -13,7 +13,7 @@
     position: absolute;
     left: 0;
     width: 100vw;
-    height: 95vh;
+    height: 97vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,25 +23,27 @@
 
     @media only screen and (max-width: 768px) {
         padding-top: 60px;
+        height: 330px !important;
+            width: 98%;
+            padding-bottom: 20px;
     }
 
+    
+  .mouse {
+    height: 40px !important;
+    width: 20px !important;
     @media only screen and (max-width: 768px) {
-        height: 26vh !important;
-        width: 98%;
-        padding-bottom: 20px;
 
-        .mouse {
-            height: 20px !important;
-            width: 20px !important;
-        }
-
+        height: 20px !important;
+        width: 20px !important;
     }
 
+  }
     .text {
         color: #FFF;
         font-size: 62px;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 600 !important;
         z-index: 1000;
         background-color: transparent;
         line-height: normal;
@@ -65,7 +67,7 @@
     object-fit: cover;
 
     @media only screen and (max-width: 768px) {
-        height: 26vh;
+        height: 330px;
     }
 }
 
@@ -75,7 +77,7 @@
     object-fit: cover;
 
     @media only screen and (max-width: 768px) {
-        height: 230px;
+        height: 300px;
     }
 }
 

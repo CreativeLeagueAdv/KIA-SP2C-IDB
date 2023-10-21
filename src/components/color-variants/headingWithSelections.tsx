@@ -24,17 +24,13 @@ export default function HeadingWithSelect({
       <div className={styles.head}>
         <Typography
           fontSize={{
-            xs: "16px",
-            sm: "16px",
-            lg: "36px",
-            xl: "36px",
+            xs: "16px !important",
+            sm: "16px !important",
+            lg: "36px !important",
+            xl: "36px !important",
           }}
-          fontWeight={"600"}
-          sx={{
-            color: "#fff",
-            textAlign: "center",
-            fontFamily: "KiaSignaturebold !important",
-          }}>
+          className={styles.headingText}
+          fontWeight={"600"}>
           {headingText}
         </Typography>
         <Stack
@@ -46,12 +42,19 @@ export default function HeadingWithSelect({
             onClick={() => {
               setSelectedView(views[1]);
             }}
-            fontSize={{ xs: "10px", sm: "10px", lg: "26px", xl: "26px" }}
+            className={styles.headingDescription}
+            fontSize={{
+              xs: "10px",
+              sm: "10px",
+              lg: "26px !important",
+              xl: "26px !important",
+            }}
             fontWeight={"600"}
             sx={{
               color: "#fff",
               cursor: "pointer",
               textAlign: "center",
+              fontSize: "26px !important",
               opacity: selectedView == views[1] ? 1 : 0.68,
               textDecoration: selectedView == views[1] ? "underline" : "none",
             }}>
@@ -63,10 +66,13 @@ export default function HeadingWithSelect({
             onClick={() => {
               setSelectedView(views[0]);
             }}
+            className={styles.headingDescription}
             sx={{
               color: "#fff",
               cursor: "pointer",
               textAlign: "center",
+              fontSize: "26px !important",
+
               opacity: selectedView == views[0] ? 1 : 0.68,
               textDecoration: selectedView == views[0] ? "underline" : "none",
             }}>
