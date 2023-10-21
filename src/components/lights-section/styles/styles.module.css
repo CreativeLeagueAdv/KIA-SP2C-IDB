@@ -31,8 +31,9 @@
     gap: 10px;
 
     @media only screen and (max-width: 768px) {
-        padding-bottom: 0px !important;
-        bottom: 20px !important;
+        padding-bottom: 15px !important;
+        bottom: 0px !important;
+        
     }
 
 }
