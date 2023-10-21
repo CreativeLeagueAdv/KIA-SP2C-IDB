@@ -3,9 +3,10 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from "./styles/styles.module.css";
 import { useTranslation } from "react-i18next";
-import {VideoPlayer} from "./VideoJs";
+import { ReactPlayer } from "./react-video";
 export default function PromoVideo() {
-  const { t, i18n } = useTranslation("common");
+  const { t } = useTranslation("common");
+  const [controlHidden, setControlHidden] = useState(true);
   const { isReady } = useRouter();
   const [source, setSource] = useState({
     type: "webm",
@@ -25,6 +26,7 @@ export default function PromoVideo() {
   const router = useRouter();
   function handleVideoEnd() {
     setShowBanner(true);
+    setControlHidden(true)
   }
   useEffect(() => {
     window?.document
@@ -32,7 +34,17 @@ export default function PromoVideo() {
       ?.addEventListener("ended", handleVideoEnd, false);
   }, [router.isReady]);
   return (
-    <div id='promo' className="videoContainer">
+    <div
+      id='promo'
+      className='videoContainer'
+     
+      onMouseMove={() => {
+        if (!showBanner)
+          setControlHidden(false);
+        setTimeout(() => {
+          setControlHidden(true)
+        }, 4000);
+      }}>
       <div style={{ position: "relative" }} className={styles.videoClass}>
         {showBanner && (
           <div className={styles.promoContainer}>
@@ -47,8 +59,11 @@ export default function PromoVideo() {
             />
           </div>
         )}
-        <VideoPlayer src={source?.src} />
-      
+        <ReactPlayer
+          controlHidden={controlHidden}
+          handleVideoEnd={handleVideoEnd}
+          src={source?.src}
+        />
       </div>
     </div>
   );

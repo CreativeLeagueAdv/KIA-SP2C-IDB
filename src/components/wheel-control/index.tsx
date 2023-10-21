@@ -105,7 +105,7 @@ const IOSSlider = styled(Slider)(({ theme: any }) => ({
     border: "none",
   },
   "& .MuiSlider-rail": {
-    opacity: 0.5,
+    opacity: 1,
     backgroundColor: "#fff",
   },
   "& .MuiSlider-mark": {
@@ -122,9 +122,9 @@ export default function WheelController() {
   const [image, setImage] = useState(0);
   function valuetext(value: any) {
     if (value / 5 != 41) setImage(value / 5);
-    return `${value}°C`;
+    return `${value}`;
   }
-      const { t } = useTranslation("common");
+  const { t } = useTranslation("common");
 
   return (
     <div className={styles.container}>
@@ -157,7 +157,7 @@ export default function WheelController() {
         width={"100%"}
         height={"100%"}
         style={{ objectFit: "cover" }}
-        src={`assets/wheel/rim_000${image<10?'0':''}${image}.webp`}
+        src={`assets/wheel/rim_000${image < 10 ? "0" : ""}${image}.webp`}
       />
       <FloatingTextSection>
         <TextHeading

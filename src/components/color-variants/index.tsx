@@ -62,7 +62,8 @@ export default function ColorVariants() {
             fontSize={{ xs: "10px", sm: "10px", lg: "28px", xl: "28px" }}
             fontWeight={400}
             mb='10px'
-            sx={{ color: "#fff" }}>
+            
+            sx={{ color: "#fff" ,fontSize:'26px !important'}}>
             {t(selectedColorImage)}
           </Typography>
           <div className={styles.colorBallContainer}>

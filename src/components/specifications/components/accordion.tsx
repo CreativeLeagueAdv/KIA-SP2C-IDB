@@ -27,7 +27,7 @@ export default function AccordionItem({
       expanded={expanded === name}
       onChange={handleChange(name)}>
       <AccordionSummary
-        style={{ background: expanded == name ? "#05141F" : "#f3f3f3" }}
+        style={{ background: expanded == name ? "#05141F" : "#f3f3f3",height:'50px !important',minHeight:'50px !important' }}
         expandIcon={
           expanded === name ? (
             <RemoveIcon

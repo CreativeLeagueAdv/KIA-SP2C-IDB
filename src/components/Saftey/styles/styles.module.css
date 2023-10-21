@@ -7,14 +7,16 @@
     flex-direction: column;
     height: 100vh;
     position: relative;
+
     @media only screen and (max-width: 768px) {
-        height: 230px !important;
+        height: 300px !important;
     }
 }
 
 .headText {
     color: #fff;
     font-size: 36px;
+    font-family: 'KiaSignaturebold' !important;
     font-weight: 600;
     margin: 0px;
     z-index: 3;
@@ -28,39 +30,51 @@
 
 .description {
     color: #fff;
-    font-size: 24px;
+    font-size: 21px;
     width: 90%;
     text-align: center;
+    font-family: 'KiaSignatureregular' !important;
     line-height: normal;
     z-index: 3;
-    margin-bottom: 0px ;
+    margin-bottom: 0px;
     margin-top: 15px;
+
     @media only screen and (max-width: 768px) {
         width: 100%;
         font-size: 10px;
-        margin-bottom: 5px; 
+        margin-bottom: 5px;
         margin-top: 5px;
     }
 
 }
+
 .subContainer {
-    padding-bottom: 75px;
+    padding-bottom: 60px;
     width: 100%;
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.75) 100%) !important;
     padding-left: 24px;
     padding-right: 24px;
     display: flex;
+    font-family: 'KiaSignaturebold' !important;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     z-index: 1 !important;
 
     @media only screen and (max-width: 768px) {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.75) 100%) !important;
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.75) 100%) !important;
         padding-bottom: 24px;
-        background-position:'center';
-        padding-inline:5px !important ;
+        background-position: 'center';
+        padding-inline: 5px !important;
         width: 100%;
     }
 
+}
+.secondContainer {
+    height: 100vh;
+    width: 100vw;
+
+    @media only screen and (max-width: 768px) {
+        height: 320px;
+    }
 }

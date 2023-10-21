@@ -4,7 +4,7 @@
     position: relative;
 
     @media only screen and (max-width: 768px) {
-        height: 230px;
+        height: 320px;
     }
 }
 
@@ -26,7 +26,11 @@
 .textTop {
     font-size: 22px;
     color: #fff;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    @media only screen and (max-width: 768px) {
+           font-size: 18px !important;
+            margin-bottom: 0px;
+        }
 }
 
 .sliderDiv {
@@ -59,5 +63,12 @@
 .textBottom {
     font-size: 18px;
     color: #fff;
-    margin-top: 15px
+    margin-top: 15px;
+     margin-bottom:0px !important;
+    @media only screen and (max-width: 768px) {
+           font-size: 10px !important;
+           padding-bottom: 15px !important;
+           margin-top: 0px !important;
+        }
+     
 }

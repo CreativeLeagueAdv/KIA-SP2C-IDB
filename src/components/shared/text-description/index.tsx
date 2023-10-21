@@ -24,9 +24,9 @@ export default function TextDescription({
       {text ? (
         <Typography
           fontSize={{
-            md: "1.5rem",
-            lg: "1.5rem",
-            xl: "1.5rem",
+            md: "19px",
+            lg: "19px",
+            xl: "19px",
             xs: "10px",
             sm: "10px",
           }}
@@ -47,6 +47,8 @@ export default function TextDescription({
               xs: "10px",
               sm: "10px",
             },
+            fontFamily: "KiaSignature !important",
+            fontWeight:'100 !important'
           }}>
           {text}
         </Typography>
@@ -54,9 +56,9 @@ export default function TextDescription({
         <>
           <Typography
             fontSize={{
-              md: "1.5rem",
-              lg: "1.5rem",
-              xl: "1.5rem",
+              md: "19px",
+              lg: "19px",
+              xl: "19px",
               xs: "10px",
               sm: "10px",
             }}
@@ -66,9 +68,9 @@ export default function TextDescription({
           </Typography>
           <Typography
             fontSize={{
-              md: "1.5rem",
-              lg: "1.5rem",
-              xl: "1.5rem",
+              md: "19px",
+              lg: "19px",
+              xl: "19px",
               xs: "10px",
               sm: "10px",
             }}
@@ -78,9 +80,9 @@ export default function TextDescription({
           </Typography>
           <Typography
             fontSize={{
-              md: "1.5rem",
-              lg: "1.5rem",
-              xl: "1.5rem",
+              md: "19px",
+              lg: "19px",
+              xl: "19px",
               xs: "10px",
               sm: "10px",
             }}

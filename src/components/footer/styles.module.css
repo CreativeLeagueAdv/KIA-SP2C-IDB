@@ -97,6 +97,7 @@
     padding-bottom: 20px;
     @media only screen and (max-width: 768px) {
         text-align: center;
+        font-size: 12px !important;
     }
 
 }
