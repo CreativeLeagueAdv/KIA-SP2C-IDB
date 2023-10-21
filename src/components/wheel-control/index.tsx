@@ -90,6 +90,7 @@ const IOSSlider = styled(Slider)(({ theme: any }) => ({
         boxShadow: iOSBoxShadow,
       },
     },
+   
   },
   "& .MuiSlider-valueLabel": {
     display: "none",
@@ -133,9 +134,7 @@ export default function WheelController() {
         <div className={styles.sliderDiv}>
           <p className={styles.leftPoint}></p>
           <IOSSlider
-            style={{
-              width: "250px",
-            }}
+            className={styles.slide}
             defaultValue={105}
             getAriaValueText={valuetext}
             onChange={(e) => {

@@ -24,21 +24,24 @@
     @media only screen and (max-width: 768px) {
         padding-top: 60px;
         height: 330px !important;
-            width: 98%;
-            padding-bottom: 20px;
+        width: 98%;
+        padding-bottom: 20px;
+        height: 96%;
     }
 
-    
-  .mouse {
-    height: 40px !important;
-    width: 20px !important;
-    @media only screen and (max-width: 768px) {
 
-        height: 20px !important;
+    .mouse {
+        height: 40px !important;
         width: 20px !important;
+
+        @media only screen and (max-width: 768px) {
+
+            height: 20px !important;
+            width: 20px !important;
+        }
+
     }
 
-  }
     .text {
         color: #FFF;
         font-size: 62px;
@@ -80,4 +83,3 @@
         height: 300px;
     }
 }
-

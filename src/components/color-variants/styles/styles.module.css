@@ -4,7 +4,7 @@
     position: relative;
 
     @media only screen and (max-width: 768px) {
-        height: 320px;
+        height: 300px;
         width: 100%;
     }
 }
@@ -131,7 +131,12 @@
         font-size: 18px !important;
     }
 }
+
 .headingDescription {
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 26px !important;
 
     @media only screen and (max-width: 768px) {
         font-size: 12px !important;
@@ -143,7 +148,7 @@
     height: 100vh;
 
     @media only screen and (max-width: 768px) {
-        height: 320px !important;
+        height: 300px !important;
     }
 }
 
@@ -163,6 +168,7 @@
         padding-top: 15px !important;
     }
 }
+
 .lightsTurn {
     font-size: 18px;
     color: #fff !important;

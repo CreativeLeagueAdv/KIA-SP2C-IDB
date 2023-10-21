@@ -43,36 +43,21 @@ export default function HeadingWithSelect({
               setSelectedView(views[1]);
             }}
             className={styles.headingDescription}
-            fontSize={{
-              xs: "10px",
-              sm: "10px",
-              lg: "26px !important",
-              xl: "26px !important",
-            }}
             fontWeight={"600"}
             sx={{
-              color: "#fff",
-              cursor: "pointer",
-              textAlign: "center",
-              fontSize: "26px !important",
               opacity: selectedView == views[1] ? 1 : 0.68,
               textDecoration: selectedView == views[1] ? "underline" : "none",
             }}>
             {t(views[1])}
           </Typography>
           <Typography
-            fontSize={{ xs: "10px", sm: "10px", lg: "26px", xl: "26px" }}
             fontWeight={"600"}
             onClick={() => {
               setSelectedView(views[0]);
             }}
             className={styles.headingDescription}
             sx={{
-              color: "#fff",
-              cursor: "pointer",
-              textAlign: "center",
-              fontSize: "26px !important",
-
+    
               opacity: selectedView == views[0] ? 1 : 0.68,
               textDecoration: selectedView == views[0] ? "underline" : "none",
             }}>

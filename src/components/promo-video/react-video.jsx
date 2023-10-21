@@ -58,7 +58,7 @@ export const ReactPlayer = ({ src, handleVideoEnd ,controlHidden}) => {
                 style={{ objectFit: 'cover' }}
                 autoPlay
                 muted
-
+                playsinline
             />
 
             {!controlHidden&&  <div className="controls">
