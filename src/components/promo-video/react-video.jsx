@@ -5,7 +5,7 @@ import PauseCircleOutlinedIcon from '@mui/icons-material/PauseCircleOutlined';
 import RestartAltOutlinedIcon from "@mui/icons-material/RestartAltOutlined";
 
 import { useRouter } from 'next/router';
-export const ReactPlayer = ({ src, handleVideoEnd ,controlHidden}) => {
+export const ReactPlayer = ({ src, handleVideoEnd, controlHidden }) => {
     const videoRef = useRef(null);
     const [playing, setPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
@@ -53,15 +53,17 @@ export const ReactPlayer = ({ src, handleVideoEnd ,controlHidden}) => {
             <video
                 className="video"
                 id='myVideo'
+                width='100%'
+                height='100vh'
                 src={src}
                 ref={videoRef}
                 style={{ objectFit: 'cover' }}
-                autoPlay
+                autoPlay={true}
                 muted
-                playsinline
+                playsInline
             />
 
-            {!controlHidden&&  <div className="controls">
+            {!controlHidden && <div className="controls">
                 {!playing ? <PlayCircleFilledWhiteOutlinedIcon
                     onClick={() => videoHandler("play")}
                     className="controlsIcon--small"
