@@ -26,6 +26,11 @@ const SpecsSection = () => {
                     <Typography className={styles.itemText}>{t('specsRim')}</Typography>
                 </div>
                 <div className={styles.item}>
+                    <img className={styles.IconImage} src='assets/specs/CarWhee.svg' />
+
+                    <Typography className={styles.itemText}>{t('panorama')}</Typography>
+                </div>
+                <div className={styles.item}>
                     <img className={styles.IconImage} src='assets/specs/saftey.svg' />
 
                     <Typography className={styles.itemText}>{t('specsKeyLess')}</Typography>

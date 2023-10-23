@@ -24,11 +24,12 @@ function Home() {
         <Technology />
         <SpecsSection />
         <BeautyShoot
-          desc={false}
+          textHead1='beauty2'
           image={"assets/beauty2.webp"}
-          textHead1={"beauty2"}
-          textHead2={""}
+          textHead2=''
+          desc={true}
         />
+
         <Footer />
       </Layout>
     </>

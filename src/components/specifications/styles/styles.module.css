@@ -41,7 +41,7 @@
 .gridList {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 60px 100px;
     width: 100%;
@@ -74,7 +74,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin:0px 10px;
+    padding:0px 60px;
     
 
     @media only screen and (max-width: 768px) {

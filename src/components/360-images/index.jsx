@@ -18,18 +18,21 @@ function AppView () {
     }, [router])
     const {t}=useTranslation('common')
     return (
-        <>
+        <div>
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
             </head>
-            <Typography className={styles.vrText}>{t('AppView')}</Typography>
+            <div className={styles.vrTextContainer}> 
+                <Typography className={styles.vrText1}>{t('AppView')}</Typography>
+                <Typography className={styles.vrText2}>{t('AppViewDesc')}</Typography>
+           </div>
             <div id="viewer" className={styles.vr}>
             </div>
 
 
-        </>
+        </div>
 
 
     );
