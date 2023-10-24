@@ -27,9 +27,11 @@ function Home() {
         <SpecsSection />
         <BeautyShoot
           textHead1='beauty2'
+          
           image={"assets/beauty2.webp"}
           textHead2=''
           desc={true}
+
         />
 
         <Footer />
