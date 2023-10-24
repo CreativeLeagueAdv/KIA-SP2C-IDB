@@ -46,21 +46,10 @@ export default function PromoVideo() {
       <div style={{ position: "relative" }} className={styles.videoClass}>
         {showBanner && (
           <div className={styles.promoContainer}>
-            <div>
+            <div
+            className={styles.textContainer}>
               <Typography className={styles.text}>{t("newSeltos")}</Typography>
               <Typography className={styles.subText}>{t("beauty2")}</Typography>
-            </div>
-            <div>
-              <img
-                src='/assets/logoWhite.png'
-               
-                className={styles.logo}
-              />
-              <Typography
-                className={styles.subText2}
->
-                {t("movement")}
-              </Typography>
             </div>
 
             <div

@@ -79,7 +79,9 @@ export default function LightsSection({
               {t("on")}
             </Button>
           </div>
-          <p className={styles.lightsTurn}>{t("turnLight")}</p>
+          <p className={styles.lightsTurn}>
+            {selectedView == "front" ? t("turnLight") : t("turnLightRear")}
+          </p>
         </div>
       </div>
     </>

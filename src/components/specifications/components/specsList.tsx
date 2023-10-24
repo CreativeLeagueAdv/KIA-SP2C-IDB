@@ -10,7 +10,7 @@ export default function SpecsList({
   name:string
   }) {
       const { t } = useTranslation("common");
-
+    console.log("name",name)
   return (
     <div
       className={styles.column}
@@ -18,8 +18,16 @@ export default function SpecsList({
       <p className={styles.columnHead}>
         <ul style={{ listStyleType: "revert-layer" }}>
           {name.includes("1") || name.includes("2")
-            ? Array(12)
-                .fill(1, 0, 12)
+            ? Array(9)
+                .fill(1, 0, 9)
+                .map((item, index) => (
+                  <li className={styles.liStyle}>
+                    {t(`specsACC${name.slice(-1)}Points${index + 1}`)}
+                  </li>
+                ))
+            : name.includes("3")
+            ? Array(6)
+                .fill(1, 0, 6)
                 .map((item, index) => (
                   <li className={styles.liStyle}>
                     {t(`specsACC${name.slice(-1)}Points${index + 1}`)}

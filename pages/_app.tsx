@@ -33,10 +33,10 @@ function App({ Component, pageProps }: AppProps) {
       <button
         style={{
           position: "fixed",
-          bottom: "5%",
+          bottom: "24px",
           borderRadius: "25%",
           border: "none",
-          insetInlineEnd: "5%",
+          insetInlineEnd: "24px",
           zIndex: "1000",
           display: isVisible ? "inline-flex" : "none",
           background: "transparent",
