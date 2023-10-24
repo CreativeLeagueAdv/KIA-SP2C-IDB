@@ -34,7 +34,14 @@ export default function BeautyShoot({
           firstLine={t(textHead1)}
           secondLine={t(textHead2)}
         />
-        {desc ? <TextDescription padding={60} text={t("beauty1Desc")} /> : ""}
+        {desc ? (
+          <TextDescription
+            padding={60}
+            text={textHead1.includes("2") ? t("beauty2Desc") : t("beauty1Desc")}
+          />
+        ) : (
+          ""
+        )}
       </FloatingTextSection>
     </div>
   );

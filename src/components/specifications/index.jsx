@@ -13,7 +13,11 @@ const SpecsSection = () => {
             <div className={styles.gridList}>
                 <div className={styles.item}>
                     <img className={styles.IconImage} src='assets/specs/engine.svg' />
-                    <Typography className={styles.itemText}>{t('specsTurbo')}</Typography>
+                    <Typography className={styles.itemText}>
+                        {t('specsTurbo')}
+                        <br />
+                        <span style={{ fontSize: '14px' }}>  {t('specsTurbo2')}</span>
+                    </Typography>
                 </div>
                 <div className={styles.item}>
                     <img className={styles.IconImage} src='assets/specs/ParkingBrake.svg' />
@@ -21,9 +25,15 @@ const SpecsSection = () => {
                     <Typography className={styles.itemText}>{t('specsAirBag')}</Typography>
                 </div>
                 <div className={styles.item}>
-                    <img className={styles.IconImage} src='assets/specs/DriveWise.png'style={{width:'60px'}} />
+                    <img className={styles.IconImage} src='assets/specs/DriveWise.png' style={{ width: '60px' }} />
 
-                    <Typography className={styles.itemText}>{t('specsRim')}</Typography>
+                    <Typography className={styles.itemText}>
+                        {t('specsRim')}
+                        <br />
+                        <span style={{ fontSize: '14px' }}>  {t('specsRim2')}</span>
+
+
+                    </Typography>
                 </div>
                 <div className={styles.item}>
                     <img className={styles.IconImage} src='assets/specs/Panoramic.svg' style={{ width: '50px' }} />

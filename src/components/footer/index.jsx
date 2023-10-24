@@ -14,6 +14,7 @@ import {
 import { useRouter } from 'next/router';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Button } from '@mui/material';
 const useStyles = makeStyles({
 
     button: {
@@ -45,7 +46,6 @@ export default function Footer (params) {
         <div id='Summary' className={styles.footerContainer}>
 
             <div className={styles.imageContainer} >
-                <h4 className={styles.text}>{t('shareLinks')}</h4>
                 <div className={styles.socialContainer}
                 >
 
@@ -53,36 +53,49 @@ export default function Footer (params) {
 
                     }} />
 
-                    <EmailShareButton style={{ background: 'transparent' }} url={base}  >
+                    <EmailShareButton style={{ background: 'transparent', height: '32px' }} url={base}  >
                         <img height={'32px'} width={'32px'} src='assets/social/Email.svg' />
                     </EmailShareButton>
+                    <img height={'32px'} width={'32px'} onClick={() => {
+                        window.open('https://www.linkedin.com/company/kia-middle-east-africa/', '_blank')
+                    }} src='assets/social/in.svg' style={{ cursor: 'pointer' }} />
 
                     <img style={{ cursor: 'pointer' }} onClick={() => {
-                        window.open('https://web.facebook.com/kiamotorsuae', '_blank')
-                    }} height={'32px'} width={'32px'}  src='assets/social/face.svg' />
+                        window.open('https://www.facebook.com/KIAMiddleEastandAfrica', '_blank')
+                    }} height={'32px'} width={'32px'} src='assets/social/face.svg' />
                     <img height={'32px'} width={'32px'} onClick={() => {
-                        window.open('https://twitter.com/KIAMotors_UAE', '_blank')
+                        window.open('https://twitter.com/KIA__MEA', '_blank')
                     }} src='assets/social/XLogo.svg' style={{ cursor: 'pointer' }} />
 
 
 
                     <img height={'32px'} width={'32px'} onClick={() => {
-                        window.open('https://www.youtube.com/user/KiaUAE', '_blank')
+                        window.open('https://www.youtube.com/channel/UClAYWjFznLNw3saZHA5OkNw', '_blank')
                     }} src='assets/social/yotube.png' style={{ cursor: 'pointer' }} />
 
 
                     <img height={'32px'} width={'32px'} onClick={() => {
-                        window.open('https://www.instagram.com/kiamotorsuae', '_blank')
+                        window.open('https://www.instagram.com/kia_mea/', '_blank')
                     }} src='assets/social/Instagram.svg' style={{ cursor: 'pointer' }} />
-
+                    <img height={'32px'} width={'32px'} onClick={() => {
+                        window.open('https://www.snapchat.com/add/kia-mea', '_blank')
+                    }} src='assets/social/snap.png' style={{ cursor: 'pointer' }} />
+                    <img height={'32px'} width={'32px'} onClick={() => {
+                        window.open('https://www.tiktok.com/@kia.mea', '_blank')
+                    }} src='assets/social/tiktok.png' style={{ cursor: 'pointer' }} />
 
                 </div>
-
-
+               
                 <div className={styles.copyRight}>
                     <img src='assets/logoWhite.png' width={'250px'} height={'63px'} />
+                    <button onClick={(() => {
+                        window.open('https://worldwide.kia.com/int/kia-global-websites', '_blank')
+                    })} style={{ padding: '1rem',marginTop:'20px', border: '1px solid #fff', background: 'transparent', borderRadius: '8px', color: '#fff', cursor: 'pointer' }}>
+                        {t('share')}
+                    </button>
                     <p className={styles.copyText}>{t('copy')}</p>
                 </div>
+
             </div>
 
         </div>
