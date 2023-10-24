@@ -6,7 +6,7 @@
   "Technology": "Technology",
   "Specifications": "Specifications",
   "Summary": "Summary",
-  "newSeltos": "The new Seltos",
+  "newSeltos": "The Kia Seltos",
   "beauty1Head": "Your Language , Your Journey.",
   "beauty1Desc": "The Seltos builds on a solid reputation of sharp, dynamic design, powerful aesthetics, and cutting-edge technology. Add in unprecedented levels of connectivity and new, distinctive design elements, and the Seltos sets a new benchmark in small SUV design. Again.",
   "colorVariants": "Exterior Colors",
@@ -20,6 +20,8 @@
   "front": "Front",
   "rear": "Rear",
   "turnLight": "Turn Star-map Signature Lighting On/Off",
+  "turnLightRear": "Turn lights on/off",
+
   "wheelVariantions": "Wheels/Rims",
   "wheelDesc": "17-Inch (B-Type) Aluminum Wheel",
   "rotateWheel": "Drag to Rotate Wheels",
@@ -63,7 +65,6 @@
   "specsACC1Points7": "3 USB Ports.",
   "specsACC1Points8": "ECM (Electric Chrome Mirror).",
   "specsACC1Points9": "Paddle shifter (Lever Type).",
-  
 
   "specsACCHead2": "Exterior",
   "specsACC2Points1": "One touch panorama sunroof.",
