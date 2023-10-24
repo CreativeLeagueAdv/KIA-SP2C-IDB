@@ -74,13 +74,13 @@ export default function ColorVariants() {
                   selectedColorImage == color ? styles.colorBallSelected : ""
                 }>
                 <img
-                  width={"100px"}
+                  width={"70px"}
                   id='ballImage'
-                  height={"100px"}
+                  height={"70px"}
                   alt='colorBall'
                   className={styles.colorBall}
                   key={`color-ball-${index}`}
-                  src={`assets/colors/balls/${color}.svg`}
+                  src={`assets/colors/balls/${color}.png`}
                   onClick={() => {
                     setSelectedColorImage(color);
                   }}

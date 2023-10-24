@@ -26,7 +26,7 @@ export default function PromoVideo() {
   const router = useRouter();
   function handleVideoEnd() {
     setShowBanner(true);
-    setControlHidden(true)
+    setControlHidden(true);
   }
   useEffect(() => {
     window?.document
@@ -37,26 +37,52 @@ export default function PromoVideo() {
     <div
       id='promo'
       className='videoContainer'
-     
       onMouseMove={() => {
-        if (!showBanner)
-          setControlHidden(false);
+        if (!showBanner) setControlHidden(false);
         setTimeout(() => {
-          setControlHidden(true)
+          setControlHidden(true);
         }, 4000);
       }}>
       <div style={{ position: "relative" }} className={styles.videoClass}>
         {showBanner && (
           <div className={styles.promoContainer}>
-            <Typography className={styles.text}>{t("newSeltos")}</Typography>
-            <img
-              className={styles.mouse}
-              src='assets/mouseIcon.svg'
-              style={{ cursor: "pointer" }}
-              onClick={() => {
-                router.push("#shoot");
-              }}
-            />
+            <div>
+              <Typography className={styles.text}>{t("newSeltos")}</Typography>
+              <Typography className={styles.subText}>{t("beauty2")}</Typography>
+            </div>
+            <div>
+              <img
+                src='/assets/logoWhite.png'
+                width={"250px"}
+                height={"100px"}
+              />
+              <Typography
+                className={styles.subText}
+                style={{ fontSize: "21px" }}>
+                {t("movement")}
+              </Typography>
+            </div>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center",
+                position: "absolute",
+                bottom: "1%",
+              }}>
+              <img
+                className={styles.mouse}
+                src='assets/mouseIcon.svg'
+                style={{
+                  cursor: "pointer",
+                }}
+                onClick={() => {
+                  router.push("#shoot");
+                }}
+              />
+            </div>
           </div>
         )}
         <ReactPlayer

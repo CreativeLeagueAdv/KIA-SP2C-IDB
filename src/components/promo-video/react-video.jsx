@@ -72,7 +72,7 @@ export const ReactPlayer = ({ src, handleVideoEnd, controlHidden }) => {
                 /> : <PauseCircleOutlinedIcon onClick={() => videoHandler("pause")}
                     className="controlsIcon--small" />}
                 <div className="time_progressbarContainer">
-                    <div style={{ width: `${(currentTime / 8) * 100}%` }} className="time_progressBar"></div>
+                    <div style={{ width: `${(currentTime / 10) * 100}%` }} className="time_progressBar"></div>
                 </div>
                 <RestartAltOutlinedIcon className="controlsIcon--small"
                     onClick={() => videoHandler("restart")} />

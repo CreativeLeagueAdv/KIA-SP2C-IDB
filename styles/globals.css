@@ -34,7 +34,7 @@ a {
 }
 
 .slick-next {
-  right: 0px !important;
+  right: 1% !important;
 
   @media only screen and (max-width: 768px) {
     top: 50% !important;
@@ -44,7 +44,7 @@ a {
 }
 
 .slick-prev {
-  left: 0px !important;
+  left: 1% !important;
 
   @media only screen and (max-width: 768px) {
     top: 50% !important;
@@ -344,7 +344,9 @@ h5 {
   width: 100% !important;
   bottom: 0px !important;
   background-color: rgba(0, 0, 0, 0.3);
-  padding: 2px !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  padding-inline: 20px;
 }
 
 .psv-canvas-container canvas {
