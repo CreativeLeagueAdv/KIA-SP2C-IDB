@@ -16,22 +16,22 @@ const SpecsSection = () => {
                     <Typography className={styles.itemText}>{t('specsTurbo')}</Typography>
                 </div>
                 <div className={styles.item}>
-                    <img className={styles.IconImage} src='assets/specs/airBag.svg' />
+                    <img className={styles.IconImage} src='assets/specs/ParkingBrake.svg' />
 
                     <Typography className={styles.itemText}>{t('specsAirBag')}</Typography>
                 </div>
                 <div className={styles.item}>
-                    <img className={styles.IconImage} src='assets/specs/CarWhee.svg' />
+                    <img className={styles.IconImage} src='assets/specs/DriveWise.png'style={{width:'60px'}} />
 
                     <Typography className={styles.itemText}>{t('specsRim')}</Typography>
                 </div>
                 <div className={styles.item}>
-                    <img className={styles.IconImage} src='assets/specs/CarWhee.svg' />
+                    <img className={styles.IconImage} src='assets/specs/Panoramic.svg' style={{ width: '50px' }} />
 
                     <Typography className={styles.itemText}>{t('panorama')}</Typography>
                 </div>
                 <div className={styles.item}>
-                    <img className={styles.IconImage} src='assets/specs/saftey.svg' />
+                    <img className={styles.IconImage} src='assets/specs/Sunroof.svg' style={{ width: '50px' }} />
 
                     <Typography className={styles.itemText}>{t('specsKeyLess')}</Typography>
                 </div>
