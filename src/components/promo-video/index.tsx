@@ -53,15 +53,16 @@ export default function PromoVideo() {
             <div>
               <img
                 src='/assets/logoWhite.png'
-                width={"250px"}
-                height={"100px"}
+               
+                className={styles.logo}
               />
               <Typography
-                className={styles.subText}
-                style={{ fontSize: "21px" }}>
+                className={styles.subText2}
+>
                 {t("movement")}
               </Typography>
             </div>
+
             <div
               style={{
                 width: "100%",

@@ -10,8 +10,10 @@ import Technology from "../src/components/technology";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Safety from "../src/components/Saftey";
 function Home() {
+
   return (
     <>
+    
       <Layout>
         <PromoVideo key={"promoVideo"} />
         <BeautyShoot textHead1='beauty1Head' textHead2='' desc={true} />

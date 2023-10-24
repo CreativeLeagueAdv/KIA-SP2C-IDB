@@ -34,7 +34,7 @@ export default function Footer (params) {
     const router = useRouter()
     let base = useMemo(() => {
         if (router.isReady) {
-            if (typeof window !=='undefined')
+            if (typeof window !== 'undefined')
                 return window.location.href
         }
     }, [router.isReady])
@@ -43,9 +43,44 @@ export default function Footer (params) {
     return (
 
         <div id='Summary' className={styles.footerContainer}>
-            <div className={styles.imageContainer} >         
+
+            <div className={styles.imageContainer} >
+                <h4 className={styles.text}>{t('shareLinks')}</h4>
+                <div className={styles.socialContainer}
+                >
+
+                    <img height={'32px'} width={'32px'} src='assets/social/Bookmark.svg' style={{ cursor: 'pointer' }} onClick={(e) => {
+
+                    }} />
+
+                    <EmailShareButton style={{ background: 'transparent' }} url={base}  >
+                        <img height={'32px'} width={'32px'} src='assets/social/Email.svg' />
+                    </EmailShareButton>
+
+                    <img style={{ cursor: 'pointer' }} onClick={() => {
+                        window.open('https://web.facebook.com/kiamotorsuae', '_blank')
+                    }} height={'32px'} width={'32px'}  src='assets/social/face.svg' />
+                    <img height={'32px'} width={'32px'} onClick={() => {
+                        window.open('https://twitter.com/KIAMotors_UAE', '_blank')
+                    }} src='assets/social/XLogo.svg' style={{ cursor: 'pointer' }} />
+
+
+
+                    <img height={'32px'} width={'32px'} onClick={() => {
+                        window.open('https://www.youtube.com/user/KiaUAE', '_blank')
+                    }} src='assets/social/yotube.png' style={{ cursor: 'pointer' }} />
+
+
+                    <img height={'32px'} width={'32px'} onClick={() => {
+                        window.open('https://www.instagram.com/kiamotorsuae', '_blank')
+                    }} src='assets/social/Instagram.svg' style={{ cursor: 'pointer' }} />
+
+
+                </div>
+
+
                 <div className={styles.copyRight}>
-                    <img src='assets/logoWhite.png' width={'143px'} height={'43px'} />
+                    <img src='assets/logoWhite.png' width={'250px'} height={'63px'} />
                     <p className={styles.copyText}>{t('copy')}</p>
                 </div>
             </div>
